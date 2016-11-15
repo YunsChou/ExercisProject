@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="m9K-fx-csr" customClass="NewsDetailSectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maz-To-TYr" userLabel="BackView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门跟帖" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j38-Pt-X2k">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="j38-Pt-X2k" secondAttribute="bottom" id="Fm0-37-fl0"/>
+                        <constraint firstItem="j38-Pt-X2k" firstAttribute="top" secondItem="maz-To-TYr" secondAttribute="top" id="Mok-cr-XKl"/>
+                        <constraint firstItem="j38-Pt-X2k" firstAttribute="leading" secondItem="maz-To-TYr" secondAttribute="leading" constant="10" id="Qpa-Yl-ZP1"/>
+                        <constraint firstAttribute="trailing" secondItem="j38-Pt-X2k" secondAttribute="trailing" constant="10" id="V95-3o-Vc6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="maz-To-TYr" firstAttribute="top" secondItem="m9K-fx-csr" secondAttribute="top" id="CmY-8I-cNt"/>
+                <constraint firstItem="maz-To-TYr" firstAttribute="leading" secondItem="m9K-fx-csr" secondAttribute="leading" constant="10" id="RDz-NI-4Am"/>
+                <constraint firstAttribute="trailing" secondItem="maz-To-TYr" secondAttribute="trailing" constant="10" id="deV-IY-iOO"/>
+                <constraint firstAttribute="bottom" secondItem="maz-To-TYr" secondAttribute="bottom" id="eov-BC-gRl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="hotOrRelateBackView" destination="maz-To-TYr" id="brL-bU-Jc4"/>
+                <outlet property="hotOrRelateLabel" destination="j38-Pt-X2k" id="cJc-sN-y7q"/>
+                <outlet property="moreCommentBackView" destination="gwi-OC-izX" id="FWt-ZM-JRk"/>
+            </connections>
+            <point key="canvasLocation" x="-15.5" y="-195"/>
+        </view>
+        <view contentMode="scaleToFill" id="xf9-Tq-BKp" customClass="NewsDetailSectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwi-OC-izX" userLabel="BackView">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多评论..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-5d-f8S">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.28573071831051366" green="0.57319736147646083" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dVM-5d-f8S" secondAttribute="trailing" constant="10" id="IvN-ty-0P3"/>
+                        <constraint firstItem="dVM-5d-f8S" firstAttribute="top" secondItem="gwi-OC-izX" secondAttribute="top" id="dyz-83-miC"/>
+                        <constraint firstItem="dVM-5d-f8S" firstAttribute="leading" secondItem="gwi-OC-izX" secondAttribute="leading" constant="10" id="jlc-G1-YBw"/>
+                        <constraint firstAttribute="bottom" secondItem="dVM-5d-f8S" secondAttribute="bottom" id="ulZ-Rn-KID"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="gwi-OC-izX" firstAttribute="top" secondItem="xf9-Tq-BKp" secondAttribute="top" id="FAR-ey-97k"/>
+                <constraint firstAttribute="trailing" secondItem="gwi-OC-izX" secondAttribute="trailing" constant="10" id="OJE-ej-SBn"/>
+                <constraint firstAttribute="bottom" secondItem="gwi-OC-izX" secondAttribute="bottom" id="Ugg-ME-inn"/>
+                <constraint firstItem="gwi-OC-izX" firstAttribute="leading" secondItem="xf9-Tq-BKp" secondAttribute="leading" constant="10" id="gKF-4M-yas"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-16" y="-81"/>
+        </view>
+        <view contentMode="scaleToFill" id="mV5-S1-CDr" customClass="NewsDetailSectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d91-gp-Brm">
+                    <state key="normal" title="上拉关闭当前页">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="d91-gp-Brm" firstAttribute="top" secondItem="mV5-S1-CDr" secondAttribute="top" constant="20" id="PCi-4o-V1F"/>
+                <constraint firstAttribute="trailing" secondItem="d91-gp-Brm" secondAttribute="trailing" constant="10" id="e3L-Nn-pNV"/>
+                <constraint firstItem="d91-gp-Brm" firstAttribute="leading" secondItem="mV5-S1-CDr" secondAttribute="leading" constant="10" id="mBB-zS-7pb"/>
+                <constraint firstAttribute="bottom" secondItem="d91-gp-Brm" secondAttribute="bottom" id="mFc-a9-wrj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-13.5" y="72"/>
+        </view>
+    </objects>
+</document>

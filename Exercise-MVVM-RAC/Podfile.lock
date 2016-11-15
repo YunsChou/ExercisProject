@@ -1,0 +1,103 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - FBRetainCycleDetector (0.1.3)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - FormatterKit (1.8.1):
+    - FormatterKit/AddressFormatter (= 1.8.1)
+    - FormatterKit/ArrayFormatter (= 1.8.1)
+    - FormatterKit/ColorFormatter (= 1.8.1)
+    - FormatterKit/LocationFormatter (= 1.8.1)
+    - FormatterKit/NameFormatter (= 1.8.1)
+    - FormatterKit/OrdinalNumberFormatter (= 1.8.1)
+    - FormatterKit/Resources (= 1.8.1)
+    - FormatterKit/TimeIntervalFormatter (= 1.8.1)
+    - FormatterKit/UnitOfInformationFormatter (= 1.8.1)
+    - FormatterKit/URLRequestFormatter (= 1.8.1)
+  - FormatterKit/AddressFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/ArrayFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/ColorFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/LocationFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/NameFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/OrdinalNumberFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/Resources (1.8.1)
+  - FormatterKit/TimeIntervalFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/UnitOfInformationFormatter (1.8.1):
+    - FormatterKit/Resources
+  - FormatterKit/URLRequestFormatter (1.8.1):
+    - FormatterKit/Resources
+  - GPUImage (0.1.7)
+  - IQKeyboardManager (4.0.7)
+  - JSPatch (1.1):
+    - JSPatch/Core (= 1.1)
+  - JSPatch/Core (1.1)
+  - LCFInfiniteScrollView (0.1):
+    - SDWebImage
+  - MBProgressHUD (1.0.0)
+  - MLeaksFinder (0.2.1):
+    - FBRetainCycleDetector
+  - OcticonsIOS (0.0.2)
+  - Ono (1.2.2)
+  - SAMKeychain (1.5.2)
+  - SDVersion (3.6)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SVPullToRefresh (0.4.1)
+  - UMengSocial (5.0)
+  - WebViewJavascriptBridge (5.0.5)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - FMDB
+  - FormatterKit
+  - GPUImage
+  - IQKeyboardManager
+  - JSPatch
+  - LCFInfiniteScrollView
+  - MBProgressHUD
+  - MLeaksFinder
+  - OcticonsIOS
+  - Ono
+  - SAMKeychain
+  - SDVersion
+  - SVPullToRefresh
+  - UMengSocial
+  - WebViewJavascriptBridge
+  - YYKit
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FormatterKit: 11ad17b983200629246a5a466f6f1bfa2df823cb
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
+  JSPatch: ade285ad1d8f06146ed6054a39cef87509453299
+  LCFInfiniteScrollView: 6552dc73dd573ecd54d8e151e3a1a742722723f7
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
+  OcticonsIOS: 845ce2794c2837cf688049c4782467ef0c3c949d
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  SDVersion: 43383b6ac05462c973c3fd92d9748c74e360aba5
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 5aa0c93e97732df04133ef7b1afdcc32c725fafd
+
+COCOAPODS: 1.0.0

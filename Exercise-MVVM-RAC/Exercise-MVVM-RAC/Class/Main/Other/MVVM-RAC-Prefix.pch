@@ -1,0 +1,28 @@
+//
+//  MVVM-RAC-Prefix.pch
+//  Exercise-MVVM-RAC
+//
+//  Created by weiying on 2016/11/9.
+//  Copyright © 2016年 yunschou. All rights reserved.
+//
+
+#ifndef MVVM_RAC_Prefix_pch
+#define MVVM_RAC_Prefix_pch
+
+/// Macro
+#import "BaseMacro.h"
+#import "BlockMacro.h"
+#import "ConfigMacro.h"
+
+/// Framework
+#import <OctoKit/OctoKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+/// Tool
+#import "MemoryCache.h"
+
+/// 
+#import "BaseViewModel.h"
+#import "BaseViewModelServices.h"
+
+#endif /* MVVM_RAC_Prefix_pch */

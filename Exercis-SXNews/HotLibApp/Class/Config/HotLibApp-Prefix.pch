@@ -1,0 +1,16 @@
+//
+//  HotLibApp-Prefix.pch
+//  HotLibApp
+//
+//  Created by weiying on 16/9/1.
+//  Copyright © 2016年 amoby. All rights reserved.
+//
+
+#ifndef HotLibApp_Prefix_pch
+#define HotLibApp_Prefix_pch
+
+#import "UIView+Frame.h"
+#import "YsMacro.h"
+#import "ReactiveCocoa.h"
+
+#endif /* HotLibApp_Prefix_pch */

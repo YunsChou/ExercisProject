@@ -1,0 +1,24 @@
+platform :ios, '8.0'
+
+target 'Exercise-MVVM-RAC' do
+    #https://cocoapods.org/?q=octokit
+#    pod 'OctoKit', '~> 0.5'
+    pod 'SVPullToRefresh'
+
+    pod 'Ono'
+    pod 'FMDB'
+    pod 'YYKit'
+    pod 'JSPatch'
+    pod 'GPUImage'
+    pod 'SDVersion'
+    pod 'SAMKeychain'
+    pod 'UMengSocial'
+    pod 'OcticonsIOS'
+    pod 'MLeaksFinder'
+    pod 'FormatterKit'
+    pod 'MBProgressHUD’
+    pod 'DZNEmptyDataSet'
+    pod 'IQKeyboardManager'
+    pod 'LCFInfiniteScrollView'
+    pod 'WebViewJavascriptBridge'
+end

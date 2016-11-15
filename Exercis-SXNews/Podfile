@@ -1,0 +1,16 @@
+platform :ios,'7.0'
+
+def all_target_pods
+    pod 'ReactiveCocoa', '~> 2.5'
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'Masonry', '~> 1.0.1'
+    pod 'YYKit', '~> 1.0.7’
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'MJExtension', '~>3.0.13'
+    pod 'FDFullscreenPopGesture', '~> 1.1'
+    pod 'UITableView+FDTemplateLayoutCell', '~> 1.4'
+end
+
+target 'HotLibApp' do
+    all_target_pods
+end
