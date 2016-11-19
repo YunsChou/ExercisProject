@@ -21,9 +21,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.serviceImpl = [[BaseViewModelServicesImpl alloc] init];
+    self.window.rootViewController = [[UIViewController alloc] init];
+//    self.serviceImpl = [[BaseViewModelServicesImpl alloc] init];
     
-    [self.serviceImpl resetRootViewModel:[[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil]];
+//    [self.serviceImpl resetRootViewModel:[[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil]];
     
     [self.window makeKeyAndVisible];
     return YES;
