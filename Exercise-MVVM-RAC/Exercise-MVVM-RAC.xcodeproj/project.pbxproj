@@ -26,9 +26,13 @@
 		A1D7437B1DD5BCC4000804FA /* WebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D7437A1DD5BCC4000804FA /* WebViewModel.m */; };
 		A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D7437D1DD5BD2C000804FA /* OAuthViewModel.m */; };
 		A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F6796C1DD17E5700C0715F /* AppDelegate.m */; };
+		A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45391DEAB26D00491D72 /* BaseRouter.m */; };
 		A78A4B961DDFF9C50073CA1A /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B641DDFF8D60073CA1A /* OctoKit.framework */; };
 		A78A4B971DDFF9CB0073CA1A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B731DDFF9630073CA1A /* ReactiveCocoa.framework */; };
 		A78A4B981DDFF9D30073CA1A /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B821DDFF96F0073CA1A /* Mantle.framework */; };
+		A7B73AA51DEAA20300613A6F /* BaseNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B73AA41DEAA20300613A6F /* BaseNavigationControllerStack.m */; };
+		A7F448551DE9C244002F1745 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F448541DE9C244002F1745 /* LoginViewController.m */; };
+		A7F448671DE9C273002F1745 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F448661DE9C273002F1745 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,10 +207,17 @@
 		A1DB29BD1DD445F600BA73B2 /* BaseViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModelServices.h; sourceTree = "<group>"; };
 		A1F6796B1DD17E5700C0715F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A1F6796C1DD17E5700C0715F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A70C45381DEAB26D00491D72 /* BaseRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
+		A70C45391DEAB26D00491D72 /* BaseRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
 		A78A4B571DDFF8D60073CA1A /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = OctoKit/OctoKit.xcodeproj; sourceTree = "<group>"; };
 		A78A4B671DDFF9630073CA1A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = OctoKit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		A78A4B761DDFF96E0073CA1A /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = OctoKit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
 		A78A4B871DDFF9970073CA1A /* OctoKitDependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKitDependencies.xcodeproj; path = OctoKit/External/OctoKitDependencies/OctoKitDependencies.xcodeproj; sourceTree = "<group>"; };
+		A7B73AA31DEAA20300613A6F /* BaseNavigationControllerStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationControllerStack.h; sourceTree = "<group>"; };
+		A7B73AA41DEAA20300613A6F /* BaseNavigationControllerStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationControllerStack.m; sourceTree = "<group>"; };
+		A7F448531DE9C244002F1745 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A7F448541DE9C244002F1745 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A7F448661DE9C273002F1745 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CB876F2B8BFF4025B09E9391 /* Pods-Exercise-MVVM-RAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-MVVM-RAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Exercise-MVVM-RAC/Pods-Exercise-MVVM-RAC.release.xcconfig"; sourceTree = "<group>"; };
 		CB87900CDDFC4D4B5ED4BFCA /* libPods-Exercise-MVVM-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Exercise-MVVM-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C68785BEBEAFC362E1C096 /* Pods-Exercise-MVVM-RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-MVVM-RAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Exercise-MVVM-RAC/Pods-Exercise-MVVM-RAC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -395,11 +406,11 @@
 			children = (
 				A1F6796B1DD17E5700C0715F /* AppDelegate.h */,
 				A1F6796C1DD17E5700C0715F /* AppDelegate.m */,
+				A7B73AA11DEAA1E800613A6F /* Model */,
+				A7B73AA21DEAA1E800613A6F /* View */,
 				A19DE5471DD44AD00091789D /* Macros */,
 				A1DB29BA1DD4457E00BA73B2 /* Services */,
 				A1F679801DD1BF9000C0715F /* ViewModel */,
-				A1F679811DD1BF9000C0715F /* View */,
-				A1F679821DD1BF9000C0715F /* Model */,
 				A1F679831DD1BF9000C0715F /* Controller */,
 				A1F6796D1DD17E5700C0715F /* Category */,
 				A1F6796E1DD17E5700C0715F /* Other */,
@@ -429,6 +440,8 @@
 			children = (
 				A1D743321DD56633000804FA /* MemoryCache.h */,
 				A1D743331DD56633000804FA /* MemoryCache.m */,
+				A70C45381DEAB26D00491D72 /* BaseRouter.h */,
+				A70C45391DEAB26D00491D72 /* BaseRouter.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -567,25 +580,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A1F679811DD1BF9000C0715F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A1F679821DD1BF9000C0715F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A1F679831DD1BF9000C0715F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				A19DE54D1DD45A3D0091789D /* BaseViewController.h */,
 				A19DE54E1DD45A3D0091789D /* BaseViewController.m */,
+				A7F448531DE9C244002F1745 /* LoginViewController.h */,
+				A7F448541DE9C244002F1745 /* LoginViewController.m */,
+				A7F448661DE9C273002F1745 /* LoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -632,6 +634,22 @@
 				A78A4B951DDFF9970073CA1A /* ISO8601DateFormatter.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A7B73AA11DEAA1E800613A6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A7B73AA21DEAA1E800613A6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A7B73AA31DEAA20300613A6F /* BaseNavigationControllerStack.h */,
+				A7B73AA41DEAA20300613A6F /* BaseNavigationControllerStack.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E30B2F9CFE93969800898446 /* Frameworks */ = {
@@ -852,6 +870,7 @@
 			files = (
 				A1B437C51DD16AB000F776E5 /* LaunchScreen.storyboard in Resources */,
 				A1B437C21DD16AB000F776E5 /* Assets.xcassets in Resources */,
+				A7F448671DE9C273002F1745 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +929,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */,
 				A177559C1DD3313A000C62B3 /* BaseViewModel.m in Sources */,
 				A1D743411DD57884000804FA /* HomePageViewModel.m in Sources */,
 				A1D743341DD56633000804FA /* MemoryCache.m in Sources */,
@@ -917,9 +937,11 @@
 				A19DE54F1DD45A3D0091789D /* BaseViewController.m in Sources */,
 				A1D743771DD5B4AB000804FA /* AppStoreServiceImpl.m in Sources */,
 				A1D743551DD59616000804FA /* ExploreViewModel.m in Sources */,
+				A7F448551DE9C244002F1745 /* LoginViewController.m in Sources */,
 				A177559E1DD3318F000C62B3 /* main.m in Sources */,
 				A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */,
 				A19DF41D1DD49F300091789D /* LoginViewModel.m in Sources */,
+				A7B73AA51DEAA20300613A6F /* BaseNavigationControllerStack.m in Sources */,
 				A1D7436D1DD5AB03000804FA /* BaseViewModelServicesImpl.m in Sources */,
 				A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */,
 				A1D743521DD595F5000804FA /* NewsViewModel.m in Sources */,

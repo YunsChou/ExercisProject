@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseViewModelServicesImpl.h"
 #import "LoginViewModel.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) BaseViewModelServicesImpl *serviceImpl;
@@ -21,10 +22,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UIViewController alloc] init];
-//    self.serviceImpl = [[BaseViewModelServicesImpl alloc] init];
-    
-//    [self.serviceImpl resetRootViewModel:[[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil]];
+    LoginViewController *loginVC = [[[NSBundle mainBundle] loadNibNamed:@"LoginViewController" owner:nil options:nil] firstObject];
+
+    self.window.rootViewController = loginVC;
+
+    self.serviceImpl = [[BaseViewModelServicesImpl alloc] init];
+//    BaseViewModel *loginViewModel = [[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil];
+//    [self.serviceImpl resetRootViewModel:loginViewModel];
     
     [self.window makeKeyAndVisible];
     return YES;
