@@ -15,35 +15,35 @@
 @implementation BaseViewController
 
 #pragma mark - life cycle
-//+ (instancetype)allocWithZone:(struct _NSZone *)zone
-//{
-//    BaseViewController *baseViewController = [BaseViewController allocWithZone:zone];
-//    
-//    @weakify(baseViewController);
-//    [[baseViewController rac_signalForSelector:@selector(initWithViewModel:)] subscribeNext:^(id x) {
-//        @strongify(baseViewController);
-//        
-//        [baseViewController bindViewModel];
-//    }];
-//    
-//    return baseViewController;
-//}
-//
-//- (instancetype)initWithViewModel:(BaseViewModel *)viewModel
-//{
-//    self = [super init];
-//    if (self) {
-//        self.viewModel = viewModel;
-//    }
-//    return self;
-//}
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    BaseViewController *baseViewController = [super allocWithZone:zone];
+    
+    @weakify(baseViewController);
+    [[baseViewController rac_signalForSelector:@selector(initWithViewModel:)] subscribeNext:^(id x) {
+        @strongify(baseViewController);
+        
+        [baseViewController bindViewModel];
+    }];
+    
+    return baseViewController;
+}
 
-//- (void)viewWillDisappear:(BOOL)animated
-//{
-//    [super viewWillDisappear:animated];
-//    
-//    [self.viewModel.willDisappearSignal sendNext:nil];
-//}
+- (instancetype)initWithViewModel:(BaseViewModel *)viewModel
+{
+    self = [super init];
+    if (self) {
+        self.viewModel = viewModel;
+    }
+    return self;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.viewModel.willDisappearSignal sendNext:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

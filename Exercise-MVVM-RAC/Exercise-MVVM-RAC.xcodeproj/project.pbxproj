@@ -27,12 +27,13 @@
 		A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D7437D1DD5BD2C000804FA /* OAuthViewModel.m */; };
 		A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F6796C1DD17E5700C0715F /* AppDelegate.m */; };
 		A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45391DEAB26D00491D72 /* BaseRouter.m */; };
+		A70C454E1DEC691500491D72 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C454C1DEC691500491D72 /* LoginViewController.m */; };
+		A70C45521DEC695900491D72 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45511DEC695900491D72 /* BaseNavigationController.m */; };
+		A70C45551DEC6B5900491D72 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45541DEC6B5900491D72 /* BaseTabBarController.m */; };
 		A78A4B961DDFF9C50073CA1A /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B641DDFF8D60073CA1A /* OctoKit.framework */; };
 		A78A4B971DDFF9CB0073CA1A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B731DDFF9630073CA1A /* ReactiveCocoa.framework */; };
 		A78A4B981DDFF9D30073CA1A /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B821DDFF96F0073CA1A /* Mantle.framework */; };
 		A7B73AA51DEAA20300613A6F /* BaseNavigationControllerStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B73AA41DEAA20300613A6F /* BaseNavigationControllerStack.m */; };
-		A7F448551DE9C244002F1745 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F448541DE9C244002F1745 /* LoginViewController.m */; };
-		A7F448671DE9C273002F1745 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F448661DE9C273002F1745 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,15 +210,18 @@
 		A1F6796C1DD17E5700C0715F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A70C45381DEAB26D00491D72 /* BaseRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
 		A70C45391DEAB26D00491D72 /* BaseRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
+		A70C454B1DEC691500491D72 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A70C454C1DEC691500491D72 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A70C45501DEC695900491D72 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		A70C45511DEC695900491D72 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		A70C45531DEC6B5900491D72 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		A70C45541DEC6B5900491D72 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
 		A78A4B571DDFF8D60073CA1A /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = OctoKit/OctoKit.xcodeproj; sourceTree = "<group>"; };
 		A78A4B671DDFF9630073CA1A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = OctoKit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		A78A4B761DDFF96E0073CA1A /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = OctoKit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
 		A78A4B871DDFF9970073CA1A /* OctoKitDependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKitDependencies.xcodeproj; path = OctoKit/External/OctoKitDependencies/OctoKitDependencies.xcodeproj; sourceTree = "<group>"; };
 		A7B73AA31DEAA20300613A6F /* BaseNavigationControllerStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationControllerStack.h; sourceTree = "<group>"; };
 		A7B73AA41DEAA20300613A6F /* BaseNavigationControllerStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationControllerStack.m; sourceTree = "<group>"; };
-		A7F448531DE9C244002F1745 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		A7F448541DE9C244002F1745 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		A7F448661DE9C273002F1745 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		CB876F2B8BFF4025B09E9391 /* Pods-Exercise-MVVM-RAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-MVVM-RAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Exercise-MVVM-RAC/Pods-Exercise-MVVM-RAC.release.xcconfig"; sourceTree = "<group>"; };
 		CB87900CDDFC4D4B5ED4BFCA /* libPods-Exercise-MVVM-RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Exercise-MVVM-RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C68785BEBEAFC362E1C096 /* Pods-Exercise-MVVM-RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise-MVVM-RAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Exercise-MVVM-RAC/Pods-Exercise-MVVM-RAC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 		A19DF4171DD49F1F0091789D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A70C454B1DEC691500491D72 /* LoginViewController.h */,
+				A70C454C1DEC691500491D72 /* LoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -585,9 +591,10 @@
 			children = (
 				A19DE54D1DD45A3D0091789D /* BaseViewController.h */,
 				A19DE54E1DD45A3D0091789D /* BaseViewController.m */,
-				A7F448531DE9C244002F1745 /* LoginViewController.h */,
-				A7F448541DE9C244002F1745 /* LoginViewController.m */,
-				A7F448661DE9C273002F1745 /* LoginViewController.xib */,
+				A70C45501DEC695900491D72 /* BaseNavigationController.h */,
+				A70C45511DEC695900491D72 /* BaseNavigationController.m */,
+				A70C45531DEC6B5900491D72 /* BaseTabBarController.h */,
+				A70C45541DEC6B5900491D72 /* BaseTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -870,7 +877,6 @@
 			files = (
 				A1B437C51DD16AB000F776E5 /* LaunchScreen.storyboard in Resources */,
 				A1B437C21DD16AB000F776E5 /* Assets.xcassets in Resources */,
-				A7F448671DE9C273002F1745 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,14 +936,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */,
+				A70C45551DEC6B5900491D72 /* BaseTabBarController.m in Sources */,
 				A177559C1DD3313A000C62B3 /* BaseViewModel.m in Sources */,
 				A1D743411DD57884000804FA /* HomePageViewModel.m in Sources */,
 				A1D743341DD56633000804FA /* MemoryCache.m in Sources */,
+				A70C45521DEC695900491D72 /* BaseNavigationController.m in Sources */,
 				A1D743701DD5B43B000804FA /* RepositoryServiceImpl.m in Sources */,
 				A19DE54F1DD45A3D0091789D /* BaseViewController.m in Sources */,
 				A1D743771DD5B4AB000804FA /* AppStoreServiceImpl.m in Sources */,
 				A1D743551DD59616000804FA /* ExploreViewModel.m in Sources */,
-				A7F448551DE9C244002F1745 /* LoginViewController.m in Sources */,
 				A177559E1DD3318F000C62B3 /* main.m in Sources */,
 				A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */,
 				A19DF41D1DD49F300091789D /* LoginViewModel.m in Sources */,
@@ -945,6 +952,7 @@
 				A1D7436D1DD5AB03000804FA /* BaseViewModelServicesImpl.m in Sources */,
 				A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */,
 				A1D743521DD595F5000804FA /* NewsViewModel.m in Sources */,
+				A70C454E1DEC691500491D72 /* LoginViewController.m in Sources */,
 				A1D7434F1DD578BC000804FA /* TableViewModel.m in Sources */,
 				A1D7437B1DD5BCC4000804FA /* WebViewModel.m in Sources */,
 				A1D743581DD5962A000804FA /* ProfileViewModel.m in Sources */,

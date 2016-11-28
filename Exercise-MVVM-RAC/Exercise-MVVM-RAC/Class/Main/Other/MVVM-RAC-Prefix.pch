@@ -9,6 +9,9 @@
 #ifndef MVVM_RAC_Prefix_pch
 #define MVVM_RAC_Prefix_pch
 
+/// Delegate
+#import "AppDelegate.h"
+
 /// Macro
 #import "BaseMacro.h"
 #import "BlockMacro.h"

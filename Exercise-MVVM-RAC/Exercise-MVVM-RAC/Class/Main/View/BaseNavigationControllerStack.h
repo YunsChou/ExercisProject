@@ -12,7 +12,6 @@
 
 @interface BaseNavigationControllerStack : NSObject
 
-
 - (instancetype)initWithServices:(id<BaseViewModelServices>)services;
 
 - (void)pushNavigationController:(UINavigationController *)navigationController;
