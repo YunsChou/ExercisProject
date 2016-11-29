@@ -20,7 +20,7 @@
 
 @implementation LoginViewModel
 
-/*
+
 - (void)initialize
 {
     [super initialize];
@@ -102,5 +102,5 @@
 {
     _username = [username stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
-*/
+
 @end

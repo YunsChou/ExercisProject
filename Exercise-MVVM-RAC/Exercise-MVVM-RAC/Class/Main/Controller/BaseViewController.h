@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong, readonly) BaseViewModel *viewModel;
 
-//@property (nonatomic, strong) UIView *snapshot;
+@property (nonatomic, strong) UIView *snapshot;
 
 - (void)bindViewModel;
 @end

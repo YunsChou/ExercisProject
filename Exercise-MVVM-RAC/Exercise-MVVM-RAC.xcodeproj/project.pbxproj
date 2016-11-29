@@ -10,6 +10,8 @@
 		12F9B0E3F85CAFFCEA352C37 /* libPods-Exercise-MVVM-RAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB87900CDDFC4D4B5ED4BFCA /* libPods-Exercise-MVVM-RAC.a */; };
 		A177559C1DD3313A000C62B3 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A177559B1DD3313A000C62B3 /* BaseViewModel.m */; };
 		A177559E1DD3318F000C62B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A177559D1DD3318F000C62B3 /* main.m */; };
+		A18C36D91DED7F5400D8DD66 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A18C36D71DED7F5400D8DD66 /* LoginViewController.m */; };
+		A18C36DA1DED7F5400D8DD66 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18C36D81DED7F5400D8DD66 /* LoginViewController.xib */; };
 		A19DE54F1DD45A3D0091789D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A19DE54E1DD45A3D0091789D /* BaseViewController.m */; };
 		A19DF41D1DD49F300091789D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A19DF41C1DD49F300091789D /* LoginViewModel.m */; };
 		A1B437C21DD16AB000F776E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B437C11DD16AB000F776E5 /* Assets.xcassets */; };
@@ -27,7 +29,6 @@
 		A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D7437D1DD5BD2C000804FA /* OAuthViewModel.m */; };
 		A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F6796C1DD17E5700C0715F /* AppDelegate.m */; };
 		A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45391DEAB26D00491D72 /* BaseRouter.m */; };
-		A70C454E1DEC691500491D72 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C454C1DEC691500491D72 /* LoginViewController.m */; };
 		A70C45521DEC695900491D72 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45511DEC695900491D72 /* BaseNavigationController.m */; };
 		A70C45551DEC6B5900491D72 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45541DEC6B5900491D72 /* BaseTabBarController.m */; };
 		A78A4B961DDFF9C50073CA1A /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B641DDFF8D60073CA1A /* OctoKit.framework */; };
@@ -169,6 +170,9 @@
 		A177559B1DD3313A000C62B3 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		A177559D1DD3318F000C62B3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A177559F1DD331C3000C62B3 /* MVVM-RAC-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MVVM-RAC-Prefix.pch"; sourceTree = "<group>"; };
+		A18C36D61DED7F5400D8DD66 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A18C36D71DED7F5400D8DD66 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A18C36D81DED7F5400D8DD66 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A19DE54A1DD44B960091789D /* BlockMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockMacro.h; sourceTree = "<group>"; };
 		A19DE54C1DD44BB60091789D /* BaseMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMacro.h; sourceTree = "<group>"; };
 		A19DE54D1DD45A3D0091789D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -210,8 +214,6 @@
 		A1F6796C1DD17E5700C0715F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A70C45381DEAB26D00491D72 /* BaseRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRouter.h; sourceTree = "<group>"; };
 		A70C45391DEAB26D00491D72 /* BaseRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRouter.m; sourceTree = "<group>"; };
-		A70C454B1DEC691500491D72 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		A70C454C1DEC691500491D72 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A70C45501DEC695900491D72 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A70C45511DEC695900491D72 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A70C45531DEC6B5900491D72 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
@@ -266,8 +268,9 @@
 		A19DF4171DD49F1F0091789D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A70C454B1DEC691500491D72 /* LoginViewController.h */,
-				A70C454C1DEC691500491D72 /* LoginViewController.m */,
+				A18C36D61DED7F5400D8DD66 /* LoginViewController.h */,
+				A18C36D71DED7F5400D8DD66 /* LoginViewController.m */,
+				A18C36D81DED7F5400D8DD66 /* LoginViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 			files = (
 				A1B437C51DD16AB000F776E5 /* LaunchScreen.storyboard in Resources */,
 				A1B437C21DD16AB000F776E5 /* Assets.xcassets in Resources */,
+				A18C36DA1DED7F5400D8DD66 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,13 +950,13 @@
 				A1D743771DD5B4AB000804FA /* AppStoreServiceImpl.m in Sources */,
 				A1D743551DD59616000804FA /* ExploreViewModel.m in Sources */,
 				A177559E1DD3318F000C62B3 /* main.m in Sources */,
+				A18C36D91DED7F5400D8DD66 /* LoginViewController.m in Sources */,
 				A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */,
 				A19DF41D1DD49F300091789D /* LoginViewModel.m in Sources */,
 				A7B73AA51DEAA20300613A6F /* BaseNavigationControllerStack.m in Sources */,
 				A1D7436D1DD5AB03000804FA /* BaseViewModelServicesImpl.m in Sources */,
 				A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */,
 				A1D743521DD595F5000804FA /* NewsViewModel.m in Sources */,
-				A70C454E1DEC691500491D72 /* LoginViewController.m in Sources */,
 				A1D7434F1DD578BC000804FA /* TableViewModel.m in Sources */,
 				A1D7437B1DD5BCC4000804FA /* WebViewModel.m in Sources */,
 				A1D743581DD5962A000804FA /* ProfileViewModel.m in Sources */,

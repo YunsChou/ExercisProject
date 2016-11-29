@@ -2,7 +2,7 @@
 //  LoginViewController.h
 //  Exercise-MVVM-RAC
 //
-//  Created by Yuns on 2016/11/26.
+//  Created by weiying on 2016/11/29.
 //  Copyright © 2016年 yunschou. All rights reserved.
 //
 
