@@ -28,7 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+    [self.loginButton setTitle:@"Input" forState:UIControlStateDisabled];
 }
 
 - (void)bindViewModel
@@ -36,6 +38,7 @@
     [super bindViewModel];
     RAC(self.viewModel, username) = self.usernameTextField.rac_textSignal;
     RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
+    
     RAC(self.loginButton, enabled) = self.viewModel.validLoginSignal;
 }
 

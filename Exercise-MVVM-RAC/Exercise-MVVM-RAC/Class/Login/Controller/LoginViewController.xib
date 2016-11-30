@@ -109,17 +109,13 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-KT-RAP">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMi-KT-RAP">
                     <rect key="frame" x="15" y="359" width="345" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="MIA-3Y-zMh"/>
                     </constraints>
-                    <state key="normal" title="Log In">
-                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <state key="disabled" title="Input">
-                        <color key="titleColor" red="0.50196078430000002" green="0.40784313729999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
+                    <state key="normal" title="Log In"/>
+                    <state key="disabled" title="Input"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

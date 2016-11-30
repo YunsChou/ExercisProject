@@ -20,12 +20,16 @@
     BaseViewController *baseViewController = [super allocWithZone:zone];
     
     @weakify(baseViewController);
-    [[baseViewController rac_signalForSelector:@selector(initWithViewModel:)] subscribeNext:^(id x) {
+//    [[baseViewController rac_signalForSelector:@selector(initWithViewModel:)] subscribeNext:^(id x) {
+//        @strongify(baseViewController);
+//        
+//        [baseViewController bindViewModel];
+//    }];
+    [[baseViewController rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id x) {
         @strongify(baseViewController);
         
         [baseViewController bindViewModel];
     }];
-    
     return baseViewController;
 }
 
@@ -54,18 +58,18 @@
 {
     RAC(self, title) = RACObserve(self.viewModel, title);
     
-    @weakify(self);
-    [self.viewModel.errors subscribeNext:^(NSError *error) {
-        @strongify(self);
-        
-        DLogError(error);
-        
-        if ([error.domain isEqual:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
-            DLog(@"授权已过期 -- ");
-        }else if (error.code != OCTClientErrorTwoFactorAuthenticationOneTimePasswordRequired && error.code != OCTClientErrorConnectionFailed){
-            DLogError(error);
-        }
-    }];
+//    @weakify(self);
+//    [self.viewModel.errors subscribeNext:^(NSError *error) {
+//        @strongify(self);
+//        
+//        DLogError(error);
+//        
+//        if ([error.domain isEqual:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
+//            DLog(@"授权已过期 -- ");
+//        }else if (error.code != OCTClientErrorTwoFactorAuthenticationOneTimePasswordRequired && error.code != OCTClientErrorConnectionFailed){
+//            DLogError(error);
+//        }
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {

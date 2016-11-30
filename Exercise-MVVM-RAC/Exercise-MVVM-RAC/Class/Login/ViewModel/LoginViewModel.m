@@ -29,7 +29,12 @@
 //        
 //    }];
     
+    [RACObserve(self, username) subscribeNext:^(NSString *x) {
+        DLog(@"name -- %@", x);
+    }];
+    
     self.validLoginSignal = [[RACSignal combineLatest:@[RACObserve(self, username), RACObserve(self, password)] reduce:^(NSString *username, NSString * password){
+        DLog(@"username -- %@", username);
         return @(username.length > 0 && password.length > 0);
     }] distinctUntilChanged];
     
@@ -48,34 +53,34 @@
         });
     };
     
-    // 客服端授权
-    [OCTClient setClientID:MRC_CLIENT_ID clientSecret:MRC_CLIENT_SECRET];
-    
-    // 登陆命令
-    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *oneTimePassword) {
-        @strongify(self);
-        OCTUser *user = [OCTUser userWithRawLogin:self.username server:OCTServer.dotComServer];
-        return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil] doNext:doNext];
-    }];
-    
-    // 浏览器登陆命令
-    self.browserLoginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-        @strongify(self);
-        
-        OAuthViewModel *viewModel = [[OAuthViewModel alloc] initWithServices:self.services params:nil];
-        
-        viewModel.callBack = ^(NSString *code){
-            @strongify(self);
-            
-            [self.services popViewModelAnimated:YES];
-            [self.exchangeTokenCommand execute:code];
-        };
-        
-        [self.services pushViewModel:viewModel animated:YES];
-        
-        return [RACSignal empty];
-    }];
-    
+//    // 客服端授权
+//    [OCTClient setClientID:MRC_CLIENT_ID clientSecret:MRC_CLIENT_SECRET];
+//    
+//    // 登陆命令
+//    self.loginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *oneTimePassword) {
+//        @strongify(self);
+//        OCTUser *user = [OCTUser userWithRawLogin:self.username server:OCTServer.dotComServer];
+//        return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil] doNext:doNext];
+//    }];
+//    
+//    // 浏览器登陆命令
+//    self.browserLoginCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+//        @strongify(self);
+//        
+//        OAuthViewModel *viewModel = [[OAuthViewModel alloc] initWithServices:self.services params:nil];
+//        
+//        viewModel.callBack = ^(NSString *code){
+//            @strongify(self);
+//            
+//            [self.services popViewModelAnimated:YES];
+//            [self.exchangeTokenCommand execute:code];
+//        };
+//        
+//        [self.services pushViewModel:viewModel animated:YES];
+//        
+//        return [RACSignal empty];
+//    }];
+//    
     // 更改token命令
     self.exchangeTokenCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString *code) {
         OCTClient *client = [[OCTClient alloc] initWithServer:[OCTServer dotComServer]];

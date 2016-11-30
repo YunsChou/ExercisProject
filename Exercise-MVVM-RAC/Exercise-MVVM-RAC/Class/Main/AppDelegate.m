@@ -26,7 +26,7 @@
     
     self.serviceImpl = [[BaseViewModelServicesImpl alloc] init];
     self.navigationControllerStack = [[BaseNavigationControllerStack alloc] initWithServices:self.serviceImpl];
-    BaseViewModel *loginViewModel = [[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil];
+    LoginViewModel *loginViewModel = [[LoginViewModel alloc] initWithServices:self.serviceImpl params:nil];
     [self.serviceImpl resetRootViewModel:loginViewModel];
     
     [self.window makeKeyAndVisible];
