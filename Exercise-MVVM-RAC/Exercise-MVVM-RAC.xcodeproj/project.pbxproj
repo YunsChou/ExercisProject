@@ -31,6 +31,15 @@
 		A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45391DEAB26D00491D72 /* BaseRouter.m */; };
 		A70C45521DEC695900491D72 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45511DEC695900491D72 /* BaseNavigationController.m */; };
 		A70C45551DEC6B5900491D72 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C45541DEC6B5900491D72 /* BaseTabBarController.m */; };
+		A71C9C951DF064F2005E1811 /* HomepageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9C941DF064F2005E1811 /* HomepageViewController.m */; };
+		A71C9CA81DF06F27005E1811 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CA71DF06F27005E1811 /* BaseTableViewController.m */; };
+		A71C9CAB1DF06F4E005E1811 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CAA1DF06F4E005E1811 /* ProfileViewController.m */; };
+		A71C9CAE1DF070A5005E1811 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CAD1DF070A5005E1811 /* ExploreViewController.m */; };
+		A71C9CB11DF070C1005E1811 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CB01DF070C1005E1811 /* NewsViewController.m */; };
+		A71C9CB91DF07317005E1811 /* SegmentedControlViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CB81DF07317005E1811 /* SegmentedControlViewModel.m */; };
+		A71C9CBC1DF07332005E1811 /* ReposViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CBB1DF07332005E1811 /* ReposViewModel.m */; };
+		A71C9CBF1DF074EB005E1811 /* SegmentedControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CBE1DF074EB005E1811 /* SegmentedControlController.m */; };
+		A71C9CC21DF0750D005E1811 /* ReposViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71C9CC11DF0750D005E1811 /* ReposViewController.m */; };
 		A78A4B961DDFF9C50073CA1A /* OctoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B641DDFF8D60073CA1A /* OctoKit.framework */; };
 		A78A4B971DDFF9CB0073CA1A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B731DDFF9630073CA1A /* ReactiveCocoa.framework */; };
 		A78A4B981DDFF9D30073CA1A /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4B821DDFF96F0073CA1A /* Mantle.framework */; };
@@ -218,6 +227,24 @@
 		A70C45511DEC695900491D72 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A70C45531DEC6B5900491D72 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
 		A70C45541DEC6B5900491D72 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		A71C9C931DF064F2005E1811 /* HomepageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageViewController.h; sourceTree = "<group>"; };
+		A71C9C941DF064F2005E1811 /* HomepageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageViewController.m; sourceTree = "<group>"; };
+		A71C9CA61DF06F27005E1811 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		A71C9CA71DF06F27005E1811 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		A71C9CA91DF06F4E005E1811 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A71C9CAA1DF06F4E005E1811 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A71C9CAC1DF070A5005E1811 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		A71C9CAD1DF070A5005E1811 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		A71C9CAF1DF070C1005E1811 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		A71C9CB01DF070C1005E1811 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A71C9CB71DF07317005E1811 /* SegmentedControlViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControlViewModel.h; sourceTree = "<group>"; };
+		A71C9CB81DF07317005E1811 /* SegmentedControlViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControlViewModel.m; sourceTree = "<group>"; };
+		A71C9CBA1DF07332005E1811 /* ReposViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposViewModel.h; sourceTree = "<group>"; };
+		A71C9CBB1DF07332005E1811 /* ReposViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposViewModel.m; sourceTree = "<group>"; };
+		A71C9CBD1DF074EB005E1811 /* SegmentedControlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControlController.h; sourceTree = "<group>"; };
+		A71C9CBE1DF074EB005E1811 /* SegmentedControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControlController.m; sourceTree = "<group>"; };
+		A71C9CC01DF0750D005E1811 /* ReposViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposViewController.h; sourceTree = "<group>"; };
+		A71C9CC11DF0750D005E1811 /* ReposViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposViewController.m; sourceTree = "<group>"; };
 		A78A4B571DDFF8D60073CA1A /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = OctoKit/OctoKit.xcodeproj; sourceTree = "<group>"; };
 		A78A4B671DDFF9630073CA1A /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = OctoKit/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
 		A78A4B761DDFF96E0073CA1A /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = OctoKit/Carthage/Checkouts/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
@@ -360,11 +387,11 @@
 			isa = PBXGroup;
 			children = (
 				A1F6796A1DD17E5700C0715F /* Main */,
+				A71C9CB21DF072BE005E1811 /* Reposity */,
 				A19DF4161DD49F1F0091789D /* Login */,
 				A1F679701DD17E5700C0715F /* News */,
 				A1F679651DD17E5700C0715F /* Explore */,
 				A1F679751DD17E5700C0715F /* Profile */,
-				A1F6797A1DD17E5700C0715F /* Repositor */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -383,6 +410,8 @@
 		A1F679661DD17E5700C0715F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A71C9CAC1DF070A5005E1811 /* ExploreViewController.h */,
+				A71C9CAD1DF070A5005E1811 /* ExploreViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -469,6 +498,8 @@
 		A1F679711DD17E5700C0715F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A71C9CAF1DF070C1005E1811 /* NewsViewController.h */,
+				A71C9CB01DF070C1005E1811 /* NewsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -510,6 +541,8 @@
 		A1F679761DD17E5700C0715F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A71C9CA91DF06F4E005E1811 /* ProfileViewController.h */,
+				A71C9CAA1DF06F4E005E1811 /* ProfileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -537,45 +570,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A1F6797A1DD17E5700C0715F /* Repositor */ = {
-			isa = PBXGroup;
-			children = (
-				A1F6797B1DD17E5700C0715F /* Controller */,
-				A1F6797C1DD17E5700C0715F /* Model */,
-				A1F6797D1DD17E5700C0715F /* View */,
-				A1F6797E1DD17E5700C0715F /* ViewModel */,
-			);
-			path = Repositor;
-			sourceTree = "<group>";
-		};
-		A1F6797B1DD17E5700C0715F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		A1F6797C1DD17E5700C0715F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A1F6797D1DD17E5700C0715F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		A1F6797E1DD17E5700C0715F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		A1F679801DD1BF9000C0715F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,8 +592,59 @@
 				A70C45511DEC695900491D72 /* BaseNavigationController.m */,
 				A70C45531DEC6B5900491D72 /* BaseTabBarController.h */,
 				A70C45541DEC6B5900491D72 /* BaseTabBarController.m */,
+				A71C9C931DF064F2005E1811 /* HomepageViewController.h */,
+				A71C9C941DF064F2005E1811 /* HomepageViewController.m */,
+				A71C9CA61DF06F27005E1811 /* BaseTableViewController.h */,
+				A71C9CA71DF06F27005E1811 /* BaseTableViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A71C9CB21DF072BE005E1811 /* Reposity */ = {
+			isa = PBXGroup;
+			children = (
+				A71C9CB31DF072BE005E1811 /* Controller */,
+				A71C9CB41DF072BE005E1811 /* Model */,
+				A71C9CB51DF072BE005E1811 /* View */,
+				A71C9CB61DF072BE005E1811 /* ViewModel */,
+			);
+			path = Reposity;
+			sourceTree = "<group>";
+		};
+		A71C9CB31DF072BE005E1811 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A71C9CBD1DF074EB005E1811 /* SegmentedControlController.h */,
+				A71C9CBE1DF074EB005E1811 /* SegmentedControlController.m */,
+				A71C9CC01DF0750D005E1811 /* ReposViewController.h */,
+				A71C9CC11DF0750D005E1811 /* ReposViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A71C9CB41DF072BE005E1811 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A71C9CB51DF072BE005E1811 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A71C9CB61DF072BE005E1811 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A71C9CB71DF07317005E1811 /* SegmentedControlViewModel.h */,
+				A71C9CB81DF07317005E1811 /* SegmentedControlViewModel.m */,
+				A71C9CBA1DF07332005E1811 /* ReposViewModel.h */,
+				A71C9CBB1DF07332005E1811 /* ReposViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A78A4B581DDFF8D60073CA1A /* Products */ = {
@@ -939,9 +984,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71C9CAE1DF070A5005E1811 /* ExploreViewController.m in Sources */,
 				A70C453A1DEAB26D00491D72 /* BaseRouter.m in Sources */,
 				A70C45551DEC6B5900491D72 /* BaseTabBarController.m in Sources */,
 				A177559C1DD3313A000C62B3 /* BaseViewModel.m in Sources */,
+				A71C9CBC1DF07332005E1811 /* ReposViewModel.m in Sources */,
 				A1D743411DD57884000804FA /* HomePageViewModel.m in Sources */,
 				A1D743341DD56633000804FA /* MemoryCache.m in Sources */,
 				A70C45521DEC695900491D72 /* BaseNavigationController.m in Sources */,
@@ -949,12 +996,19 @@
 				A19DE54F1DD45A3D0091789D /* BaseViewController.m in Sources */,
 				A1D743771DD5B4AB000804FA /* AppStoreServiceImpl.m in Sources */,
 				A1D743551DD59616000804FA /* ExploreViewModel.m in Sources */,
+				A71C9CBF1DF074EB005E1811 /* SegmentedControlController.m in Sources */,
+				A71C9CAB1DF06F4E005E1811 /* ProfileViewController.m in Sources */,
 				A177559E1DD3318F000C62B3 /* main.m in Sources */,
 				A18C36D91DED7F5400D8DD66 /* LoginViewController.m in Sources */,
+				A71C9CC21DF0750D005E1811 /* ReposViewController.m in Sources */,
 				A1D7437E1DD5BD2C000804FA /* OAuthViewModel.m in Sources */,
+				A71C9CB91DF07317005E1811 /* SegmentedControlViewModel.m in Sources */,
 				A19DF41D1DD49F300091789D /* LoginViewModel.m in Sources */,
+				A71C9C951DF064F2005E1811 /* HomepageViewController.m in Sources */,
 				A7B73AA51DEAA20300613A6F /* BaseNavigationControllerStack.m in Sources */,
 				A1D7436D1DD5AB03000804FA /* BaseViewModelServicesImpl.m in Sources */,
+				A71C9CB11DF070C1005E1811 /* NewsViewController.m in Sources */,
+				A71C9CA81DF06F27005E1811 /* BaseTableViewController.m in Sources */,
 				A1F6797F1DD17E5700C0715F /* AppDelegate.m in Sources */,
 				A1D743521DD595F5000804FA /* NewsViewModel.m in Sources */,
 				A1D7434F1DD578BC000804FA /* TableViewModel.m in Sources */,

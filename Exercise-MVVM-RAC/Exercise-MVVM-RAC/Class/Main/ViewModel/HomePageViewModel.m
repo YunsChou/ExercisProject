@@ -10,6 +10,7 @@
 
 @interface HomePageViewModel ()
 @property (nonatomic, strong, readwrite) NewsViewModel *newsViewModel;
+@property (nonatomic, strong, readwrite) ReposViewModel *reposViewModel;
 @property (nonatomic, strong, readwrite) ExploreViewModel *exploreViewModel;
 @property (nonatomic, strong, readwrite) ProfileViewModel *profileViewModel;
 @end
@@ -21,6 +22,7 @@
     [super initialize];
     
     self.newsViewModel = [[NewsViewModel alloc] initWithServices:self.services params:nil];
+    self.reposViewModel = [[ReposViewModel alloc] initWithServices:self.services params:nil];
     self.exploreViewModel = [[ExploreViewModel alloc] initWithServices:self.services params:nil];
     self.profileViewModel = [[ProfileViewModel alloc] initWithServices:self.services params:nil];
 }

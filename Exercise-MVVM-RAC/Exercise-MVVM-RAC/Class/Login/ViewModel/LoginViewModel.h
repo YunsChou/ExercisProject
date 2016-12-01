@@ -25,7 +25,4 @@
 /// 登陆按钮 命令
 @property (nonatomic, strong, readonly) RACCommand *loginCommand;
 
-/// 浏览器登陆按钮 命令
-@property (nonatomic, strong, readonly) RACCommand *browserLoginCommand;
-@property (nonatomic, strong, readonly) RACCommand *exchangeTokenCommand;
 @end

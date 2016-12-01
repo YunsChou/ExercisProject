@@ -8,12 +8,15 @@
 
 #import "BaseViewModel.h"
 #import "NewsViewModel.h"
+#import "ReposViewModel.h"
 #import "ExploreViewModel.h"
 #import "ProfileViewModel.h"
 
 @interface HomePageViewModel : BaseViewModel
 
 @property (nonatomic, strong, readonly) NewsViewModel *newsViewModel;
+
+@property (nonatomic, strong, readonly) ReposViewModel *reposViewModel;
 
 @property (nonatomic, strong, readonly) ExploreViewModel *exploreViewModel;
 

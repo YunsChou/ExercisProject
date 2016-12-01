@@ -31,6 +31,9 @@
 
     [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
     [self.loginButton setTitle:@"Input" forState:UIControlStateDisabled];
+    [self.loginButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
+    [self.loginButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
 }
 
 - (void)bindViewModel
@@ -40,6 +43,41 @@
     RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
     
     RAC(self.loginButton, enabled) = self.viewModel.validLoginSignal;
+    
+    @weakify(self)
+    
+    [[self.loginButton
+      rac_signalForControlEvents:UIControlEventTouchUpInside]
+     subscribeNext:^(id x) {
+         @strongify(self)
+         [self.viewModel.loginCommand execute:nil];
+     }];
+    
+    
+    [[[RACSignal
+      	merge:@[self.viewModel.loginCommand.executing]]
+      doNext:^(id x) {
+          @strongify(self)
+          [self.view endEditing:YES];
+      }]
+    	subscribeNext:^(NSNumber *executing) {
+            @strongify(self)
+            if (executing.boolValue) {
+                [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES].label.text = @"Logging in...";
+            } else {
+                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+            }
+        }];
+    
+    [[RACSignal
+      merge:@[self.viewModel.loginCommand.errors]]
+     subscribeNext:^(NSError *error) {
+         if ([error.domain isEqual:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
+             DLogError(@"Incorrect username or password");
+         } else {
+             DLogError(error.localizedDescription);
+         }
+     }];
 }
 
 @end

@@ -36,7 +36,8 @@
 - (NSDictionary *)viewModelViewMappings
 {
     return @{
-             @"LoginViewModel": @"LoginViewController"
+             @"LoginViewModel" : @"LoginViewController",
+             @"HomePageViewModel" : @"HomepageViewController"
              };
 }
 
