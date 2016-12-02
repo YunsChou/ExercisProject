@@ -20,7 +20,6 @@
 
 @implementation LoginViewModel
 
-
 - (void)initialize
 {
     [super initialize];
@@ -54,8 +53,6 @@
         OCTUser *user = [OCTUser userWithRawLogin:self.username server:OCTServer.dotComServer];
         return [[OCTClient signInAsUser:user password:self.password oneTimePassword:oneTimePassword scopes:OCTClientAuthorizationScopesUser | OCTClientAuthorizationScopesRepository note:nil noteURL:nil fingerprint:nil] doNext:doNext];
     }];
-
-    
 }
 
 - (void)setUsername:(NSString *)username

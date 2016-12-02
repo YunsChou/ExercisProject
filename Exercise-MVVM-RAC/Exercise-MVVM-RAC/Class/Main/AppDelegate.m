@@ -9,11 +9,10 @@
 #import "AppDelegate.h"
 #import "BaseViewModelServicesImpl.h"
 #import "LoginViewModel.h"
-#import "BaseNavigationControllerStack.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) BaseViewModelServicesImpl *serviceImpl;
-@property (nonatomic, strong) BaseNavigationControllerStack *navigationControllerStack;
+@property (nonatomic, strong, readwrite) BaseNavigationControllerStack *navigationControllerStack;
 
 @end
 
