@@ -24,6 +24,7 @@
     [self subject];
     [self sequenceAndTuple];
     [self commandAndExecut];
+    [self multicastConnection];
 }
 
 // RACSignal：
@@ -35,6 +36,7 @@
 {
     //1、创建信号（冷信号）
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"触发信号 -- ");
         //3、订阅者发出信号
         [subscriber sendNext:@"订阅者发送信号"];
         [subscriber sendCompleted];
@@ -132,7 +134,7 @@
     
     //订阅command中的信号
     [command.executionSignals subscribeNext:^(id x) {
-       NSLog(@"command中的信号对象 -- %@", x);
+//       NSLog(@"command中的信号对象 -- %@", x);
        [x subscribeNext:^(id x) {
            NSLog(@"信号中发送的内容 -- %@", x);
        }];
@@ -141,6 +143,41 @@
     //3、执行命令
     [command execute:@1];
     
+}
+
+- (void)multicastConnection
+{
+    RACSignal *signal0 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"发送数据0");
+        [subscriber sendNext:@10];
+        return nil;
+    }];
+    
+    [signal0 subscribeNext:^(id x) {
+        NSLog(@"第一订阅者接收信号");
+    }];
+    
+    [signal0 subscribeNext:^(id x) {
+        NSLog(@"第二订阅者接收信号");
+    }];
+    
+    RACSignal *signal1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"发送数据1");
+        [subscriber sendNext:@100];
+        return nil;
+    }];
+    
+    RACMulticastConnection *connect = [signal1 publish];
+    
+    [signal1 subscribeNext:^(id x) {
+        NSLog(@"订阅者一信号 -- %@", x);
+    }];
+    
+    [signal1 subscribeNext:^(id x) {
+        NSLog(@"订阅者二信号 -- %@", x);
+    }];
+    
+    [connect connect];
 }
 
 - (void)didReceiveMemoryWarning {
