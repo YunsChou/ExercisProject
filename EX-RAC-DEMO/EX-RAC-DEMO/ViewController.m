@@ -11,6 +11,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label1;
+@property (nonatomic, strong) RACCommand *command;
 
 @end
 
@@ -22,18 +23,19 @@
     [self signal];
     [self subject];
     [self sequenceAndTuple];
+    [self commandAndExecut];
 }
 
-// RACSignal
+// RACSignal：
 //使用步骤：
 // 1.创建信号 + (RACSignal *)createSignal:(RACDisposable * (^)(id<RACSubscriber> subscriber))didSubscribe
 // 2.订阅信号,才会激活信号. - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
 // 3.发送信号 - (void)sendNext:(id)value
 - (void)signal
 {
-    //1、创建信号
+    //1、创建信号（冷信号）
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        //2、订阅者发出信号（先保存）
+        //3、订阅者发出信号
         [subscriber sendNext:@"订阅者发送信号"];
         [subscriber sendCompleted];
         //信号发送完成或发送错误的时候，会触发取消订阅或清理资源
@@ -42,16 +44,16 @@
         }];
     }];
     
-    //3、订阅信号（激活信号）
+    //2、订阅信号（激活信号，热信号）
     [signal subscribeNext:^(id x) {
         NSLog(@"接收到的数据 -- %@", x);
     }];
 }
 
-// RACSubject
+// RACSubject：信号提供者，自己可以充当信号，又能发送信号
+// eg.替换代理：例子如pushToNextClick
 //使用步骤：
 // 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
-// 可以先订阅信号，也可以先发送信号
 // 2.订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
 // 3.发送信号 sendNext:(id)value
 - (void)subject
@@ -66,7 +68,7 @@
         NSLog(@"第二个订阅者 -- %@", x);
     }];
     
-    [subject sendNext:@"subject订阅者发出信号"];
+    [subject sendNext:@"subject发出信号"];
 }
 
 // RACSubject替换代理
@@ -103,6 +105,42 @@
         RACTupleUnpack(NSString *key, NSString *value) = x;
         NSLog(@"dict - %@ : %@,", key, value);
     }];
+}
+
+// RACCommand：
+// eg.网络请求：将数据通过execute传入(input)，通过command.executionSignals获取内部信号(数据变化)
+// 使用步骤:
+// 1.创建命令 initWithSignalBlock:(RACSignal * (^)(id input))signalBlock
+// 2.在signalBlock中，创建RACSignal，并且作为signalBlock的返回值
+// 3.执行命令 - (RACSignal *)execute:(id)input
+- (void)commandAndExecut
+{
+    //1、创建命令
+    RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        NSLog(@"执行命令 -- %@", input);
+        //2、创建信号，用来传递数据
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"发送数据"];
+            [subscriber sendCompleted];
+            return [RACDisposable disposableWithBlock:^{
+                
+            }];
+        }];
+    }];
+    //命令必须要被强引用，否则接收不到数据
+    _command = command;
+    
+    //订阅command中的信号
+    [command.executionSignals subscribeNext:^(id x) {
+       NSLog(@"command中的信号对象 -- %@", x);
+       [x subscribeNext:^(id x) {
+           NSLog(@"信号中发送的内容 -- %@", x);
+       }];
+    }];
+    
+    //3、执行命令
+    [command execute:@1];
+    
 }
 
 - (void)didReceiveMemoryWarning {
