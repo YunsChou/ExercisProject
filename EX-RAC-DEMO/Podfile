@@ -1,0 +1,7 @@
+platform :ios, '7.0'
+
+target 'EX-RAC-DEMO' do
+
+pod 'ReactiveCocoa', '~> 2.5'
+
+end

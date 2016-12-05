@@ -1,0 +1,15 @@
+//
+//  EX-RAC-Prefix.pch
+//  EX-RAC-DEMO
+//
+//  Created by weiying on 2016/12/5.
+//  Copyright © 2016年 amoby. All rights reserved.
+//
+
+#ifndef EX_RAC_Prefix_pch
+#define EX_RAC_Prefix_pch
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
+#endif /* EX_RAC_Prefix_pch */
