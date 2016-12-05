@@ -1,0 +1,22 @@
+platform :ios, '7.0'
+
+target 'EX-XMHelper' do
+
+pod 'ReactiveCocoa', '~> 2.5'
+pod 'CocoaHTTPServer'
+pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'MBProgressHUD'
+pod 'pop'
+pod 'FMDB'
+pod 'Mantle'
+#pod 'GCDObjC'
+pod 'BlocksKit'
+#pod 'MagicalRecord'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'UIColor-Utilities'
+pod 'UzysAnimatedGifPullToRefresh'
+
+
+end
