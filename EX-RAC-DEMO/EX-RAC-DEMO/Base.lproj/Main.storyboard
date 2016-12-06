@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-425" y="178"/>
         </scene>
-        <!--View Controller-->
+        <!--基础篇-->
         <scene sceneID="cbx-yN-Wvu">
             <objects>
                 <viewController id="C80-Uq-BUE" customClass="ViewController" sceneMemberID="viewController">
@@ -54,6 +54,21 @@
                                     <action selector="pushToNextClick:" destination="C80-Uq-BUE" eventType="touchUpInside" id="5QX-qq-heh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FwQ-sa-cJ2">
+                                <rect key="frame" x="46" y="162" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TextLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTl-k7-q3c">
+                                <rect key="frame" x="46" y="213" width="283" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.60474231919999999" blue="0.75389007969999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,19 +77,22 @@
                             <constraint firstAttribute="trailingMargin" secondItem="OOs-Xj-84k" secondAttribute="trailing" constant="30" id="qCz-gT-OJ8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MC9-bL-mHh"/>
+                    <navigationItem key="navigationItem" title="基础篇" id="MC9-bL-mHh"/>
                     <connections>
+                        <outlet property="button1" destination="mgR-La-D7W" id="3Vo-hU-6nx"/>
                         <outlet property="label1" destination="OOs-Xj-84k" id="wbG-2V-WuO"/>
+                        <outlet property="textField1" destination="FwQ-sa-cJ2" id="e17-eS-d0Y"/>
+                        <outlet property="textLabel" destination="XTl-k7-q3c" id="mFq-Xy-exz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3n-yc-1pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="296.80000000000001" y="177.66116941529236"/>
         </scene>
-        <!--Test View Controller-->
+        <!--进阶篇-->
         <scene sceneID="Zfp-Cb-Hy5">
             <objects>
-                <viewController storyboardIdentifier="TestViewController" id="h2e-0M-4V3" customClass="TestViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestViewController" title="进阶篇" id="h2e-0M-4V3" customClass="TestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NmS-Nb-Rej"/>
                         <viewControllerLayoutGuide type="bottom" id="eak-i2-z3L"/>

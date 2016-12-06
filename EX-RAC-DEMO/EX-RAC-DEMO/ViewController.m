@@ -12,6 +12,9 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (nonatomic, strong) RACCommand *command;
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
 
@@ -25,6 +28,8 @@
     [self sequenceAndTuple];
     [self commandAndExecut];
     [self multicastConnection];
+    
+    [self RACCommonUsage];
 }
 
 // RACSignal：
@@ -76,6 +81,8 @@
 // RACSubject替换代理
 - (IBAction)pushToNextClick:(id)sender {
     
+    NSLog(@"跳转按钮点击 -- 原方法 -- 打印");
+    
     TestViewController *testVC = [self.storyboard instantiateViewControllerWithIdentifier:@"TestViewController"];
     
     testVC.signal = [RACSubject subject];
@@ -97,7 +104,7 @@
     // 遍历数组,遍历出来的是数组中的元素
     NSArray *array = @[@1, @2, @3, @4, @"对象"];
     [array.rac_sequence.signal subscribeNext:^(id x) {
-        NSLog(@"array - %@", x);
+        NSLog(@"遍历数组array - %@", x);
     }];
 
     // 遍历字典,遍历出来的键值对会包装成RACTuple(元组对象)
@@ -105,7 +112,7 @@
     [dict.rac_sequence.signal subscribeNext:^(id x) {
 //        NSLog(@"dict -- %@", x);
         RACTupleUnpack(NSString *key, NSString *value) = x;
-        NSLog(@"dict - %@ : %@,", key, value);
+        NSLog(@"变量字典dict - %@ : %@,", key, value);
     }];
 }
 
@@ -181,6 +188,95 @@
 }
 
 #pragma mark - ARC常见用法
+static NSString * const changeTextNotifiKey = @"changeTextNotifiKey";
+
+- (void)RACCommonUsage
+{
+    [self insteadSelector];
+    [self insteadKVO];
+    [self insteadControlEvent];
+    [self insteadNotifiObserver];
+    [self insteadTextControlObserver];
+    
+    [self textSearch];
+}
+
+/**
+ 1、替换代理或方法
+ */
+- (void)insteadSelector
+{
+//    self rac_signalForSelector:<#(SEL)#> fromProtocol:<#(Protocol *)#>
+    [[self rac_signalForSelector:@selector(viewWillAppear:)] subscribeNext:^(id x) {
+        NSLog(@"页面将要出现 -- 被替换后 -- 打印");
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"页面将要出现 -- 原方法 -- 打印");
+}
+
+/**
+ 2、替换KVO
+ */
+- (void)insteadKVO
+{
+    [[self.label1 rac_valuesAndChangesForKeyPath:@"text" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld observer:nil] subscribeNext:^(RACTuple *x) {
+//        NSLog(@"x -- %@", x);
+        //该元组对象中，包含-- 新值和相关的信息字典
+        RACTupleUnpack(NSString *newValue, NSDictionary *info) = x;
+        NSLog(@"KVO - newValue：%@ \n info：%@,", newValue, info);
+        
+        //内容改变后，发出通知(仅为了测试替换通知)
+        [[NSNotificationCenter defaultCenter] postNotificationName:changeTextNotifiKey object:nil];
+    }];
+}
+
+/**
+ 3、替换控件触发的事件
+ */
+- (void)insteadControlEvent
+{
+    [[self.button1 rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            NSLog(@"跳转按钮点击 -- 被替换后 -- 打印");
+    }];
+}
+
+/**
+ 4、替换通知观察者
+ */
+- (void)insteadNotifiObserver
+{
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:changeTextNotifiKey object:nil] subscribeNext:^(id x) {
+        NSLog(@"收到内容改变后 -- 发出的通知");
+    }];
+}
+
+/**
+ 5、替换文本框的监听方式
+ */
+- (void)insteadTextControlObserver
+{
+    [self.textField1.rac_textSignal subscribeNext:^(id x) {
+        NSLog(@"文本框内容改变 -- %@", x);
+    }];
+}
+
+/**
+ 5.1、文本框监听延伸：实现输入内容实时搜索功能
+ 需要满足：（1）文本框不为空；（2）文本框数据不同时；（3）停止输入后，延迟0.5秒无输入
+ 同时满足以上条件，才发送请求
+ */
+- (void)textSearch
+{
+    [[[[self.textField1.rac_textSignal ignore:@""] distinctUntilChanged] throttle:0.5] subscribeNext:^(id x) {
+        NSInteger random = arc4random() % 10;
+        self.textLabel.text = [NSString stringWithFormat:@"%@ - %ld",x, random];
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
