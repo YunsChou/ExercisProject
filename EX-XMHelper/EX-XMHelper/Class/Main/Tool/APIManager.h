@@ -20,6 +20,6 @@ typedef NS_ENUM(NSUInteger, VIDEO_TYPE) {
 
 + (NSString *)api_videoListWithVideoType:(VIDEO_TYPE)videoType;
 
-+ (NSString *)api_seriesWithType:(VIDEO_TYPE)videoType name:(NSString *)name page:(NSInteger)page;
++ (NSString *)api_videoDetailWithVideoType:(VIDEO_TYPE)videoType ID:(NSString *)ID page:(NSInteger)page;
 
 @end

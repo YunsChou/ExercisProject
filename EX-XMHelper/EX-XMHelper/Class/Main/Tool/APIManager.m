@@ -22,10 +22,10 @@
     return string;
 }
 
-+ (NSString *)api_seriesWithType:(VIDEO_TYPE)videoType name:(NSString *)name page:(NSInteger)page
++ (NSString *)api_videoDetailWithVideoType:(VIDEO_TYPE)videoType ID:(NSString *)ID page:(NSInteger)page
 {
     NSInteger arc = arc4random()%1000000 +100000;
-    NSString *string = [NSString stringWithFormat:@"http://lolbox.oss.aliyuncs.com/json/v4/video/videolist_%ld_%@_%ld.json?r=%ld",(long)videoType, name, (long)page, (long)arc];
+    NSString *string = [NSString stringWithFormat:@"http://lolbox.oss.aliyuncs.com/json/v4/video/videolist_%ld_%@_%ld.json?r=%ld",(long)videoType, ID, (long)page, (long)arc];
     return string;
 }
 

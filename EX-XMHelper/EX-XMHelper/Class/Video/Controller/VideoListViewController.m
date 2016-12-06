@@ -8,7 +8,8 @@
 
 #import "VideoListViewController.h"
 #import "VideoListViewModel.h"
-#import "VideoListCollectionViewCell.h"
+#import "VideoListCell.h"
+#import "VideoDetailViewController.h"
 
 @interface VideoListViewController ()<UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *videoTypeSegment;
@@ -27,6 +28,19 @@ static NSString * const reuseIdentifier = @"VideoListCell";
     RAC(self.viewModel, segmentType) = [self.videoTypeSegment rac_newSelectedSegmentIndexChannelWithNilValue:nil];
     
     @weakify(self);
+    
+    //页面显示的的时候请求数据(替换事件响应方法或代理)
+    RACSignal *viewAppearSignal = [self rac_signalForSelector:@selector(viewWillAppear:)];
+    [[[[RACSignal merge:@[viewAppearSignal]] flattenMap:^RACStream *(id value) {
+        @strongify(self);
+        return [self.viewModel refreshObjectWithErrorHandler:^{
+            
+        }];
+    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+        [self.collectionView reloadData];
+    }];
+    
+    //点击segment请求数据(监听事件)
     [[[[self.videoTypeSegment rac_signalForControlEvents:UIControlEventValueChanged] flattenMap:^RACStream *(id value) {
         return [self.viewModel refreshObjectWithErrorHandler:^{
             
@@ -35,6 +49,8 @@ static NSString * const reuseIdentifier = @"VideoListCell";
         @strongify(self);
         [self.collectionView reloadData];
     }];
+    
+    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -42,16 +58,15 @@ static NSString * const reuseIdentifier = @"VideoListCell";
     return 1;
 }
 
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.viewModel.videoList.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    VideoListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    VideoListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.videoModel = self.viewModel.videoList[indexPath.row];
     // Configure the cell
-    
+//    RAC(cell, model) = self.viewModel.videoList;
     return cell;
 }
 
@@ -64,6 +79,18 @@ static NSString * const reuseIdentifier = @"VideoListCell";
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(5, 5, 5, 5);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //sender为（点击等）动作对象
+    VideoListCell *cell = (VideoListCell *)sender;
+    //push动作的identifier
+    if ([segue.identifier isEqualToString:@"VideoDetail"]) {
+        //目标控制器
+        VideoDetailViewController *videoDetailVC = segue.destinationViewController;
+        [videoDetailVC setVideoType:self.viewModel.type name:cell.videoModel.name ID:cell.videoModel.itemID];
+    }
 }
 
 

@@ -8,7 +8,7 @@
 
 #import "BaseCollectionViewController.h"
 
-@interface VideoListViewController : BaseCollectionViewController
+@interface VideoListViewController : UICollectionViewController
 
 
 @end

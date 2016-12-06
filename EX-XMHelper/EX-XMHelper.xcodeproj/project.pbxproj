@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		500CF5A40B7B6D72C754F4FB /* libPods-EX-XMHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 341840A5B883539B739C725D /* libPods-EX-XMHelper.a */; };
+		A184F04D1DF65FC10063AF00 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F04C1DF65FC10063AF00 /* VideoDetailViewController.m */; };
+		A184F0501DF668A00063AF00 /* VideoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F04F1DF668A00063AF00 /* VideoDetailModel.m */; };
+		A184F0531DF668C60063AF00 /* VideoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0521DF668C60063AF00 /* VideoDetailCell.m */; };
+		A184F0561DF668DF0063AF00 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0551DF668DF0063AF00 /* VideoListCell.m */; };
+		A184F0591DF669990063AF00 /* VideoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0581DF669990063AF00 /* VideoDetailViewModel.m */; };
 		A7D72A5B1DF3F0F900C1754B /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A5A1DF3F0F900C1754B /* BaseTableViewController.m */; };
 		A7D72A5E1DF3F10900C1754B /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A5D1DF3F10900C1754B /* BaseCollectionViewController.m */; };
 		A7D72A611DF3F14500C1754B /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A601DF3F14500C1754B /* VideoListViewController.m */; };
 		A7D72A641DF3F16A00C1754B /* DownloadListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A631DF3F16A00C1754B /* DownloadListViewController.m */; };
 		A7D72A671DF3F86C00C1754B /* VideoListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A661DF3F86C00C1754B /* VideoListViewModel.m */; };
-		A7D72A6A1DF4041F00C1754B /* VideoListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A691DF4041F00C1754B /* VideoListCollectionViewCell.m */; };
 		A7D72A6D1DF404A600C1754B /* VideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A6C1DF404A600C1754B /* VideoListModel.m */; };
 		A7D98B9E1DF2EA24007A16D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D98B9C1DF2EA24007A16D0 /* Main.storyboard */; };
 		A7D98BA01DF2EA24007A16D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D98B9F1DF2EA24007A16D0 /* Assets.xcassets */; };
@@ -27,6 +31,16 @@
 /* Begin PBXFileReference section */
 		341840A5B883539B739C725D /* libPods-EX-XMHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EX-XMHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6755F39EA762086F84E5FE65 /* Pods-EX-XMHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX-XMHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-EX-XMHelper/Pods-EX-XMHelper.release.xcconfig"; sourceTree = "<group>"; };
+		A184F04B1DF65FC10063AF00 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
+		A184F04C1DF65FC10063AF00 /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
+		A184F04E1DF668A00063AF00 /* VideoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailModel.h; sourceTree = "<group>"; };
+		A184F04F1DF668A00063AF00 /* VideoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailModel.m; sourceTree = "<group>"; };
+		A184F0511DF668C60063AF00 /* VideoDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailCell.h; sourceTree = "<group>"; };
+		A184F0521DF668C60063AF00 /* VideoDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailCell.m; sourceTree = "<group>"; };
+		A184F0541DF668DF0063AF00 /* VideoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListCell.h; sourceTree = "<group>"; };
+		A184F0551DF668DF0063AF00 /* VideoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
+		A184F0571DF669990063AF00 /* VideoDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewModel.h; sourceTree = "<group>"; };
+		A184F0581DF669990063AF00 /* VideoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewModel.m; sourceTree = "<group>"; };
 		A7D72A591DF3F0F900C1754B /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		A7D72A5A1DF3F0F900C1754B /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		A7D72A5C1DF3F10900C1754B /* BaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
@@ -37,8 +51,6 @@
 		A7D72A631DF3F16A00C1754B /* DownloadListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadListViewController.m; sourceTree = "<group>"; };
 		A7D72A651DF3F86C00C1754B /* VideoListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListViewModel.h; sourceTree = "<group>"; };
 		A7D72A661DF3F86C00C1754B /* VideoListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListViewModel.m; sourceTree = "<group>"; };
-		A7D72A681DF4041F00C1754B /* VideoListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListCollectionViewCell.h; sourceTree = "<group>"; };
-		A7D72A691DF4041F00C1754B /* VideoListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListCollectionViewCell.m; sourceTree = "<group>"; };
 		A7D72A6B1DF404A600C1754B /* VideoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoListModel.h; sourceTree = "<group>"; };
 		A7D72A6C1DF404A600C1754B /* VideoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListModel.m; sourceTree = "<group>"; };
 		A7D98B901DF2EA24007A16D0 /* EX-XMHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EX-XMHelper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,6 +256,8 @@
 			children = (
 				A7D72A5F1DF3F14500C1754B /* VideoListViewController.h */,
 				A7D72A601DF3F14500C1754B /* VideoListViewController.m */,
+				A184F04B1DF65FC10063AF00 /* VideoDetailViewController.h */,
+				A184F04C1DF65FC10063AF00 /* VideoDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +267,8 @@
 			children = (
 				A7D72A6B1DF404A600C1754B /* VideoListModel.h */,
 				A7D72A6C1DF404A600C1754B /* VideoListModel.m */,
+				A184F04E1DF668A00063AF00 /* VideoDetailModel.h */,
+				A184F04F1DF668A00063AF00 /* VideoDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,8 +276,10 @@
 		A7D98BBC1DF2EC58007A16D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A7D72A681DF4041F00C1754B /* VideoListCollectionViewCell.h */,
-				A7D72A691DF4041F00C1754B /* VideoListCollectionViewCell.m */,
+				A184F0541DF668DF0063AF00 /* VideoListCell.h */,
+				A184F0551DF668DF0063AF00 /* VideoListCell.m */,
+				A184F0511DF668C60063AF00 /* VideoDetailCell.h */,
+				A184F0521DF668C60063AF00 /* VideoDetailCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +289,8 @@
 			children = (
 				A7D72A651DF3F86C00C1754B /* VideoListViewModel.h */,
 				A7D72A661DF3F86C00C1754B /* VideoListViewModel.m */,
+				A184F0571DF669990063AF00 /* VideoDetailViewModel.h */,
+				A184F0581DF669990063AF00 /* VideoDetailViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -407,14 +427,18 @@
 			files = (
 				A7D98BCC1DF3149A007A16D0 /* APIManager.m in Sources */,
 				A7D72A5E1DF3F10900C1754B /* BaseCollectionViewController.m in Sources */,
+				A184F0591DF669990063AF00 /* VideoDetailViewModel.m in Sources */,
 				A7D72A6D1DF404A600C1754B /* VideoListModel.m in Sources */,
+				A184F04D1DF65FC10063AF00 /* VideoDetailViewController.m in Sources */,
 				A7D72A641DF3F16A00C1754B /* DownloadListViewController.m in Sources */,
 				A7D98BBF1DF2EC58007A16D0 /* main.m in Sources */,
-				A7D72A6A1DF4041F00C1754B /* VideoListCollectionViewCell.m in Sources */,
+				A184F0501DF668A00063AF00 /* VideoDetailModel.m in Sources */,
 				A7D72A671DF3F86C00C1754B /* VideoListViewModel.m in Sources */,
 				A7D72A611DF3F14500C1754B /* VideoListViewController.m in Sources */,
 				A7D98BC91DF30BC2007A16D0 /* HTTPRequest.m in Sources */,
 				A7D98BBE1DF2EC58007A16D0 /* AppDelegate.m in Sources */,
+				A184F0561DF668DF0063AF00 /* VideoListCell.m in Sources */,
+				A184F0531DF668C60063AF00 /* VideoDetailCell.m in Sources */,
 				A7D72A5B1DF3F0F900C1754B /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

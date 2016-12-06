@@ -11,6 +11,7 @@
 #import "VideoListModel.h"
 
 @interface VideoListViewModel ()
+@property (nonatomic, assign, readwrite) VIDEO_TYPE type;
 @property (nonatomic, strong, readwrite) NSArray *videoList;
 @end
 
@@ -21,6 +22,9 @@
     self = [super init];
     if (self) {
         self.type = VIDEO_TYPE_PLAYER;
+        RAC(self, type) = [RACObserve(self, segmentType) map:^id(NSNumber *value) {
+            return @(value.integerValue + 2);
+        }];
     }
     return self;
 }
@@ -32,10 +36,10 @@
     @weakify(self);
     RACSignal *signal = [[[HTTPRequest sharedInstance] fetchJSONFromUrlString:urlString errorHandler:^{
         errorHandler();
-    }] doNext:^(NSArray *videoArray) {
+    }] doNext:^(NSArray *listArray) {
         @strongify(self);
         
-        self.videoList = [VideoListModel mj_objectArrayWithKeyValuesArray:videoArray];
+        self.videoList = [VideoListModel mj_objectArrayWithKeyValuesArray:listArray];
     }];
     
     return signal;

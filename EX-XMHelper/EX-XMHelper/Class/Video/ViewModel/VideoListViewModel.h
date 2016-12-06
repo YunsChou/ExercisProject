@@ -17,15 +17,15 @@ typedef NS_ENUM(NSUInteger, VideoListSegmentType) {
 
 @interface VideoListViewModel : NSObject
 
-@property (nonatomic, assign) VIDEO_TYPE type;
+@property (nonatomic, assign, readonly) VIDEO_TYPE type;
 
 @property (nonatomic, assign) VideoListSegmentType segmentType;
 
 @property (nonatomic, strong, readonly) NSArray *videoList;
 
-@property (nonatomic, copy, readonly) NSString *titleText;
-
-@property (nonatomic, copy, readonly) NSString *imageSrc;
+//@property (nonatomic, copy, readonly) NSString *titleText;
+//
+//@property (nonatomic, copy, readonly) NSString *imageSrc;
 
 - (RACSignal *)refreshObjectWithErrorHandler:(void(^)())errorHandler;
 
