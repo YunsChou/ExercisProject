@@ -28,6 +28,9 @@
 		A7D98BBF1DF2EC58007A16D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D98BB71DF2EC58007A16D0 /* main.m */; };
 		A7D98BC91DF30BC2007A16D0 /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D98BC81DF30BC2007A16D0 /* HTTPRequest.m */; };
 		A7D98BCC1DF3149A007A16D0 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D98BCB1DF3149A007A16D0 /* APIManager.m */; };
+		A7F71AB71DF6F0DA00B2692C /* jgr@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = A7F71AB51DF6F0DA00B2692C /* jgr@2x.gif */; };
+		A7F71AB81DF6F0DA00B2692C /* run@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = A7F71AB61DF6F0DA00B2692C /* run@2x.gif */; };
+		A7F71ABB1DF7043100B2692C /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F71ABA1DF7043100B2692C /* BaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,10 @@
 		A7D98BC81DF30BC2007A16D0 /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
 		A7D98BCA1DF3149A007A16D0 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		A7D98BCB1DF3149A007A16D0 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		A7F71AB51DF6F0DA00B2692C /* jgr@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "jgr@2x.gif"; sourceTree = "<group>"; };
+		A7F71AB61DF6F0DA00B2692C /* run@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "run@2x.gif"; sourceTree = "<group>"; };
+		A7F71AB91DF7043100B2692C /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		A7F71ABA1DF7043100B2692C /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		ABF0FFCD6BDBD91DD5C42106 /* Pods-EX-XMHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EX-XMHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EX-XMHelper/Pods-EX-XMHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +144,7 @@
 		A7D98BAA1DF2EC58007A16D0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				A7F71AB41DF6F0D000B2692C /* Resource */,
 				A7D98BB01DF2EC58007A16D0 /* Main */,
 				A7D98BB91DF2EC58007A16D0 /* Video */,
 				A7D98BAB1DF2EC58007A16D0 /* Downloads */,
@@ -214,6 +222,8 @@
 				A7D72A5A1DF3F0F900C1754B /* BaseTableViewController.m */,
 				A7D72A5C1DF3F10900C1754B /* BaseCollectionViewController.h */,
 				A7D72A5D1DF3F10900C1754B /* BaseCollectionViewController.m */,
+				A7F71AB91DF7043100B2692C /* BaseNavigationController.h */,
+				A7F71ABA1DF7043100B2692C /* BaseNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +315,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A7F71AB41DF6F0D000B2692C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A7F71AB51DF6F0DA00B2692C /* jgr@2x.gif */,
+				A7F71AB61DF6F0DA00B2692C /* run@2x.gif */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		FD95DC7C6F4B06AFB7998877 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +395,9 @@
 			files = (
 				A7D98BA31DF2EA24007A16D0 /* LaunchScreen.storyboard in Resources */,
 				A7D98BA01DF2EA24007A16D0 /* Assets.xcassets in Resources */,
+				A7F71AB81DF6F0DA00B2692C /* run@2x.gif in Resources */,
 				A7D98B9E1DF2EA24007A16D0 /* Main.storyboard in Resources */,
+				A7F71AB71DF6F0DA00B2692C /* jgr@2x.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +470,7 @@
 				A7D72A611DF3F14500C1754B /* VideoListViewController.m in Sources */,
 				A7D98BC91DF30BC2007A16D0 /* HTTPRequest.m in Sources */,
 				A7D98BBE1DF2EC58007A16D0 /* AppDelegate.m in Sources */,
+				A7F71ABB1DF7043100B2692C /* BaseNavigationController.m in Sources */,
 				A184F0561DF668DF0063AF00 /* VideoListCell.m in Sources */,
 				A184F0531DF668C60063AF00 /* VideoDetailCell.m in Sources */,
 				A7D72A5B1DF3F0F900C1754B /* BaseTableViewController.m in Sources */,

@@ -11,8 +11,16 @@
 
 @interface VideoDetailViewModel : NSObject
 
-@property (nonatomic, strong) RACCommand *command;
+//@property (nonatomic, strong) RACCommand *command;
 
-@property (nonatomic, strong, readonly) NSArray *detailList;
+@property (nonatomic, strong, readonly) NSMutableArray *detailList;
+
+@property (nonatomic, copy) NSString *ID;
+
+@property (nonatomic, assign) NSInteger type;
+
+- (RACSignal *)fetchLatestObjects;
+
+- (RACSignal *)fetchMoreObjects;
 
 @end

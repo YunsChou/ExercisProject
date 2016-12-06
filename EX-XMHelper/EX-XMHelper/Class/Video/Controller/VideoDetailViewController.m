@@ -7,6 +7,7 @@
 //
 
 #import "VideoDetailViewController.h"
+#import "MJRefresh.h"
 #import "VideoDetailViewModel.h"
 #import "VideoDetailDataSource.h"
 
@@ -37,30 +38,57 @@
 
 - (void)setupTableView
 {
+    [self setupHeaderRefresh];
+    [self setupFooterRefresh];
     self.tableView.dataSource = self.dataSource;
 }
 
 - (void)setupSignal
 {
+    RAC(self, title) = RACObserve(self, name);
     //页面显示的的时候请求数据(替换事件响应方法或代理)
     RACSignal *viewAppearSignal = [self rac_signalForSelector:@selector(viewWillAppear:)];
-    [viewAppearSignal subscribeNext:^(id x) {
-        NSString *urlString = [APIManager api_videoDetailWithVideoType:_type ID:_ID page:1];
-        [[self.viewModel.command execute:urlString] subscribeNext:^(NSArray *detailArr) {
-            self.dataSource.items = self.viewModel.detailList;
-            [self.tableView reloadData];
-        }];
+    RACSignal *headerRefreshSignal = [self rac_signalForSelector:@selector(headerRefresh)];
+    RACSignal *footerRefreshSignal = [self rac_signalForSelector:@selector(footerRefresh)];
+    
+//    [[RACSignal merge:@[viewAppearSignal, headerRefreshSignal]] subscribeNext:^(id x) {
+//        NSString *urlString = [APIManager api_videoDetailWithVideoType:_type ID:_ID page:1];
+//        [[self.viewModel.command execute:urlString] subscribeNext:^(NSArray *detailArr) {
+//            [self.tableView.mj_header endRefreshing];
+//            [self.tableView.mj_footer endRefreshing];
+//            [self.tableView reloadData];
+//        }];
+//    }];
+    
+//    [[[[self rac_signalForSelector:@selector(footerRefresh)] flattenMap:^RACStream *(id value) {
+//        return [APIManager api_videoDetailWithVideoType:_type ID:_ID page:1];
+//    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+//        
+//    }];
+    
+    [[[[RACSignal merge:@[viewAppearSignal, headerRefreshSignal]] flattenMap:^RACStream *(id value) {
+        return [self.viewModel fetchLatestObjects];
+    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView reloadData];
+    }];
+    
+    [[[footerRefreshSignal flattenMap:^RACStream *(id value) {
+        return [self.viewModel fetchMoreObjects];
+    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+        [self.tableView.mj_footer endRefreshing];
+        [self.tableView reloadData];
     }];
 }
-
-
-#pragma mark - Table view delegate
 
 #pragma mark - lazy loading
 - (VideoDetailViewModel *)viewModel
 {
     if (!_viewModel) {
-        self.viewModel = [[VideoDetailViewModel alloc] init];
+        VideoDetailViewModel *viewModel = [[VideoDetailViewModel alloc] init];
+        RAC(viewModel, ID) = RACObserve(self, ID);
+        RAC(viewModel, type) = RACObserve(self, type);
+        self.viewModel = viewModel;
     }
     return _viewModel;
 }
@@ -68,7 +96,9 @@
 - (VideoDetailDataSource *)dataSource
 {
     if (!_dataSource) {
-        self.dataSource = [[VideoDetailDataSource alloc] init];
+        VideoDetailDataSource *dataSource = [[VideoDetailDataSource alloc] init];
+        RAC(dataSource, items) = RACObserve(self.viewModel, detailList);
+        self.dataSource = dataSource;
     }
     return _dataSource;
 }

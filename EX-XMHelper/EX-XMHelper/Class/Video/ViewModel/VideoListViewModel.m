@@ -34,9 +34,7 @@
     NSString *urlString = [APIManager api_videoListWithVideoType:self.type];
     
     @weakify(self);
-    RACSignal *signal = [[[HTTPRequest sharedInstance] fetchJSONFromUrlString:urlString errorHandler:^{
-        errorHandler();
-    }] doNext:^(NSArray *listArray) {
+    RACSignal *signal = [[[HTTPRequest sharedInstance] fetchJSONFromUrlString:urlString] doNext:^(NSArray *listArray) {
         @strongify(self);
         
         self.videoList = [VideoListModel mj_objectArrayWithKeyValuesArray:listArray];

@@ -10,4 +10,12 @@
 
 @interface BaseTableViewController : UITableViewController
 
+- (void)setupHeaderRefresh;
+
+- (void)setupFooterRefresh;
+
+- (void)headerRefresh;
+
+- (void)footerRefresh;
+
 @end

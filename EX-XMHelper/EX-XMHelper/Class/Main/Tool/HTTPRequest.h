@@ -12,6 +12,6 @@
 
 + (instancetype)sharedInstance;
 
-- (RACSignal *)fetchJSONFromUrlString:(NSString *)urlString errorHandler:(void(^)())errorHandler;
+- (RACSignal *)fetchJSONFromUrlString:(NSString *)urlString;
 
 @end

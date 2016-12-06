@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Yuns. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
 
-@interface VideoDetailViewController : UITableViewController
+@interface VideoDetailViewController : BaseTableViewController
 
 - (void)setVideoType:(NSInteger)type name:(NSString *)name ID:(NSString *)ID;
 

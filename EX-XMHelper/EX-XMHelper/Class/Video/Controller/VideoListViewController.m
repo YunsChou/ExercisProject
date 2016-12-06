@@ -20,12 +20,28 @@ static NSString * const reuseIdentifier = @"VideoListCell";
 
 @implementation VideoListViewController
 
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    self.hidesBottomBarWhenPushed = NO;
+//}
+//
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    self.hidesBottomBarWhenPushed = YES;
+//};
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.viewModel = [[VideoListViewModel alloc] init];
+//    self.hidesBottomBarWhenPushed = YES;
     
-    RAC(self.viewModel, segmentType) = [self.videoTypeSegment rac_newSelectedSegmentIndexChannelWithNilValue:nil];
+    [self setupSignal];
+}
+
+- (void)setupSignal
+{
     
     @weakify(self);
     
@@ -49,8 +65,6 @@ static NSString * const reuseIdentifier = @"VideoListCell";
         @strongify(self);
         [self.collectionView reloadData];
     }];
-    
-    
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -93,5 +107,15 @@ static NSString * const reuseIdentifier = @"VideoListCell";
     }
 }
 
+#pragma mark - lazy load
+- (VideoListViewModel *)viewModel
+{
+    if (!_viewModel) {
+        VideoListViewModel *viewModel = [[VideoListViewModel alloc] init];
+        RAC(viewModel, segmentType) = [self.videoTypeSegment rac_newSelectedSegmentIndexChannelWithNilValue:nil];
+        self.viewModel = viewModel;
+    }
+    return _viewModel;
+}
 
 @end

@@ -9,14 +9,14 @@ pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'pop'
 pod 'FMDB'
-pod 'Mantle'
+#pod 'Mantle'
 #pod 'GCDObjC'
 pod 'BlocksKit'
 #pod 'MagicalRecord'
 pod 'MJRefresh'
 pod 'MJExtension'
 pod 'UIColor-Utilities'
-pod 'UzysAnimatedGifPullToRefresh'
+#pod 'UzysAnimatedGifPullToRefresh'
 
 
 end

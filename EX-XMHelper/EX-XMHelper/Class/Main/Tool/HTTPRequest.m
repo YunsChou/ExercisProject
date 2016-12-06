@@ -34,10 +34,10 @@
     return self;
 }
 
-- (RACSignal *)fetchJSONFromUrlString:(NSString *)urlString errorHandler:(void(^)())errorHandler
+- (RACSignal *)fetchJSONFromUrlString:(NSString *)urlString
 {
     @weakify(self);
-    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self);
         NSURLSessionDataTask *dataTask = [self.session dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (!error) {
@@ -59,8 +59,6 @@
         return [RACDisposable disposableWithBlock:^{
             [dataTask cancel];
         }];
-    }] doError:^(NSError *error) {
-        return errorHandler(error);
     }];
     
     return signal;
