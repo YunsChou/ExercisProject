@@ -13,6 +13,8 @@
 		A184F0531DF668C60063AF00 /* VideoDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0521DF668C60063AF00 /* VideoDetailCell.m */; };
 		A184F0561DF668DF0063AF00 /* VideoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0551DF668DF0063AF00 /* VideoListCell.m */; };
 		A184F0591DF669990063AF00 /* VideoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F0581DF669990063AF00 /* VideoDetailViewModel.m */; };
+		A184F05C1DF6C7870063AF00 /* VideoDetailDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F05B1DF6C7870063AF00 /* VideoDetailDelegate.m */; };
+		A184F05F1DF6C7950063AF00 /* VideoDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A184F05E1DF6C7950063AF00 /* VideoDetailDataSource.m */; };
 		A7D72A5B1DF3F0F900C1754B /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A5A1DF3F0F900C1754B /* BaseTableViewController.m */; };
 		A7D72A5E1DF3F10900C1754B /* BaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A5D1DF3F10900C1754B /* BaseCollectionViewController.m */; };
 		A7D72A611DF3F14500C1754B /* VideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D72A601DF3F14500C1754B /* VideoListViewController.m */; };
@@ -41,6 +43,10 @@
 		A184F0551DF668DF0063AF00 /* VideoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoListCell.m; sourceTree = "<group>"; };
 		A184F0571DF669990063AF00 /* VideoDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewModel.h; sourceTree = "<group>"; };
 		A184F0581DF669990063AF00 /* VideoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewModel.m; sourceTree = "<group>"; };
+		A184F05A1DF6C7870063AF00 /* VideoDetailDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailDelegate.h; sourceTree = "<group>"; };
+		A184F05B1DF6C7870063AF00 /* VideoDetailDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailDelegate.m; sourceTree = "<group>"; };
+		A184F05D1DF6C7950063AF00 /* VideoDetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailDataSource.h; sourceTree = "<group>"; };
+		A184F05E1DF6C7950063AF00 /* VideoDetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailDataSource.m; sourceTree = "<group>"; };
 		A7D72A591DF3F0F900C1754B /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		A7D72A5A1DF3F0F900C1754B /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		A7D72A5C1DF3F10900C1754B /* BaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCollectionViewController.h; sourceTree = "<group>"; };
@@ -291,6 +297,10 @@
 				A7D72A661DF3F86C00C1754B /* VideoListViewModel.m */,
 				A184F0571DF669990063AF00 /* VideoDetailViewModel.h */,
 				A184F0581DF669990063AF00 /* VideoDetailViewModel.m */,
+				A184F05A1DF6C7870063AF00 /* VideoDetailDelegate.h */,
+				A184F05B1DF6C7870063AF00 /* VideoDetailDelegate.m */,
+				A184F05D1DF6C7950063AF00 /* VideoDetailDataSource.h */,
+				A184F05E1DF6C7950063AF00 /* VideoDetailDataSource.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -427,9 +437,11 @@
 			files = (
 				A7D98BCC1DF3149A007A16D0 /* APIManager.m in Sources */,
 				A7D72A5E1DF3F10900C1754B /* BaseCollectionViewController.m in Sources */,
+				A184F05F1DF6C7950063AF00 /* VideoDetailDataSource.m in Sources */,
 				A184F0591DF669990063AF00 /* VideoDetailViewModel.m in Sources */,
 				A7D72A6D1DF404A600C1754B /* VideoListModel.m in Sources */,
 				A184F04D1DF65FC10063AF00 /* VideoDetailViewController.m in Sources */,
+				A184F05C1DF6C7870063AF00 /* VideoDetailDelegate.m in Sources */,
 				A7D72A641DF3F16A00C1754B /* DownloadListViewController.m in Sources */,
 				A7D98BBF1DF2EC58007A16D0 /* main.m in Sources */,
 				A184F0501DF668A00063AF00 /* VideoDetailModel.m in Sources */,
