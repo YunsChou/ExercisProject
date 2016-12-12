@@ -14,14 +14,14 @@ typedef Person * (^nameBlock)(NSString *name);
 
 typedef Person * (^workBlock)();
 
-typedef Person * (^playBlock)(NSString *type);
-
 @interface Person : NSObject
 
 - (nameBlock)who;
 
 - (workBlock)work;
 
-- (playBlock)play;
+- (workBlock)workWithTime:(int)time;
+
+- (int)testNoParamsFunc;
 
 @end

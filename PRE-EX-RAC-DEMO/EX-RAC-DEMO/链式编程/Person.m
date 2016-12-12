@@ -13,25 +13,33 @@
 - (nameBlock)who
 {
     return ^Person * (NSString *name){
-        NSLog(@"员工：%@", name);
+        NSLog(@"%@", name);
         return self;
     };
 }
 
 - (workBlock)work
 {
+    NSLog(@"调用work方法");
     return ^Person * (){
-        NSLog(@"搬了一天砖");
+        NSLog(@"程序员");
         return self;
     };
 }
 
-- (playBlock)play
+- (workBlock)workWithTime:(int)time
 {
+    NSLog(@"调用workWithTime方法");
     return ^(NSString *type){
-        NSLog(@"玩：%@", type);
+        NSLog(@"工作%d小时之后", time);
         return self;
     };
+}
+
+- (int)testNoParamsFunc
+{
+    NSLog(@"测试点语法调用普通无参数方法");
+    return 1;
 }
 
 @end
