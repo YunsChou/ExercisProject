@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10FE3BB1E1395F700689AB7 /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FE3BA1E1395F700689AB7 /* Robot.m */; };
 		A1BF60221DF4FEB300F8CCD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF60211DF4FEB300F8CCD8 /* main.m */; };
 		A1BF60251DF4FEB300F8CCD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF60241DF4FEB300F8CCD8 /* AppDelegate.m */; };
 		A1BF60281DF4FEB300F8CCD8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF60271DF4FEB300F8CCD8 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10FE3B91E1395F700689AB7 /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
+		A10FE3BA1E1395F700689AB7 /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
 		A1BF601D1DF4FEB300F8CCD8 /* EX-RAC-DEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EX-RAC-DEMO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BF60211DF4FEB300F8CCD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1BF60231DF4FEB300F8CCD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10FE3B81E13953D00689AB7 /* 函数式和链式 */ = {
+			isa = PBXGroup;
+			children = (
+				A10FE3B91E1395F700689AB7 /* Robot.h */,
+				A10FE3BA1E1395F700689AB7 /* Robot.m */,
+			);
+			name = "函数式和链式";
+			path = "../../../../../Desktop/函数式和链式";
+			sourceTree = "<group>";
+		};
 		A1BF60141DF4FEB200F8CCD8 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +95,7 @@
 				A1BF60381DF4FF5000F8CCD8 /* 函数式编程 */,
 				A1BF60371DF4FF5000F8CCD8 /* 链式编程 */,
 				A1BF60481DF53E1300F8CCD8 /* 响应式编程 */,
+				A10FE3B81E13953D00689AB7 /* 函数式和链式 */,
 				A1BF60291DF4FEB300F8CCD8 /* Main.storyboard */,
 				A1BF602C1DF4FEB300F8CCD8 /* Assets.xcassets */,
 				A1BF602E1DF4FEB300F8CCD8 /* LaunchScreen.storyboard */,
@@ -221,6 +235,7 @@
 				A1BF60471DF51A5000F8CCD8 /* Person.m in Sources */,
 				A7455E901E1012F200C1E268 /* Animal.m in Sources */,
 				A1BF60441DF505CE00F8CCD8 /* Calculator.m in Sources */,
+				A10FE3BB1E1395F700689AB7 /* Robot.m in Sources */,
 				A1BF60221DF4FEB300F8CCD8 /* main.m in Sources */,
 				A7455E951E1014E400C1E268 /* BlockAndCFunc.m in Sources */,
 			);

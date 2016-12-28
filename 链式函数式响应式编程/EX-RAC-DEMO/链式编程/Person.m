@@ -22,7 +22,7 @@
 {
     NSLog(@"调用work方法");
     return ^Person * (){
-        NSLog(@"程序员");
+        NSLog(@"敲代码");
         return self;
     };
 }
