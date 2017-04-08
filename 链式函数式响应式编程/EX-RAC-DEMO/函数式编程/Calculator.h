@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-//返回值 block名 参数
 typedef int (^valueBlock)(int value);
+
 typedef BOOL (^boolBlock)(int value);
 
 @interface Calculator : NSObject
-/**计算结果*/
+
 @property (nonatomic, assign) int result;
 
 @property (nonatomic, assign) BOOL isEqual;

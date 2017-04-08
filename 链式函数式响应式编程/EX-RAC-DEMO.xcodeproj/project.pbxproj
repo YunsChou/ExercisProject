@@ -16,6 +16,7 @@
 		A1BF60441DF505CE00F8CCD8 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF60431DF505CE00F8CCD8 /* Calculator.m */; };
 		A1BF60471DF51A5000F8CCD8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF60461DF51A5000F8CCD8 /* Person.m */; };
 		A1BF604B1DF53FF200F8CCD8 /* ResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BF604A1DF53FF200F8CCD8 /* ResponseModel.m */; };
+		A1EA93F21E97C623000DCBCE /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = A1EA93F11E97C623000DCBCE /* Robot.m */; };
 		A7455E901E1012F200C1E268 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = A7455E8F1E1012F200C1E268 /* Animal.m */; };
 		A7455E951E1014E400C1E268 /* BlockAndCFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = A7455E941E1014E400C1E268 /* BlockAndCFunc.m */; };
 /* End PBXBuildFile section */
@@ -31,16 +32,18 @@
 		A1BF602C1DF4FEB300F8CCD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1BF602F1DF4FEB300F8CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BF60311DF4FEB300F8CCD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1BF60421DF505CE00F8CCD8 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
-		A1BF60431DF505CE00F8CCD8 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
-		A1BF60451DF51A5000F8CCD8 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		A1BF60461DF51A5000F8CCD8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		A1BF60491DF53FF200F8CCD8 /* ResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseModel.h; sourceTree = "<group>"; };
-		A1BF604A1DF53FF200F8CCD8 /* ResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseModel.m; sourceTree = "<group>"; };
-		A7455E8E1E1012F200C1E268 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
-		A7455E8F1E1012F200C1E268 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
-		A7455E931E1014E400C1E268 /* BlockAndCFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockAndCFunc.h; sourceTree = "<group>"; };
-		A7455E941E1014E400C1E268 /* BlockAndCFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockAndCFunc.m; sourceTree = "<group>"; };
+		A1BF60421DF505CE00F8CCD8 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = "函数式编程/Calculator.h"; sourceTree = "<group>"; };
+		A1BF60431DF505CE00F8CCD8 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calculator.m; path = "函数式编程/Calculator.m"; sourceTree = "<group>"; };
+		A1BF60451DF51A5000F8CCD8 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = "链式编程/Person.h"; sourceTree = "<group>"; };
+		A1BF60461DF51A5000F8CCD8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = "链式编程/Person.m"; sourceTree = "<group>"; };
+		A1BF60491DF53FF200F8CCD8 /* ResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResponseModel.h; path = "响应式编程/ResponseModel.h"; sourceTree = "<group>"; };
+		A1BF604A1DF53FF200F8CCD8 /* ResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResponseModel.m; path = "响应式编程/ResponseModel.m"; sourceTree = "<group>"; };
+		A1EA93F01E97C623000DCBCE /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
+		A1EA93F11E97C623000DCBCE /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
+		A7455E8E1E1012F200C1E268 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Animal.h; path = "函数式到链式/Animal.h"; sourceTree = "<group>"; };
+		A7455E8F1E1012F200C1E268 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Animal.m; path = "函数式到链式/Animal.m"; sourceTree = "<group>"; };
+		A7455E931E1014E400C1E268 /* BlockAndCFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockAndCFunc.h; path = "block和C函数/BlockAndCFunc.h"; sourceTree = "<group>"; };
+		A7455E941E1014E400C1E268 /* BlockAndCFunc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockAndCFunc.m; path = "block和C函数/BlockAndCFunc.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +81,21 @@
 				A1BF60261DF4FEB300F8CCD8 /* ViewController.h */,
 				A1BF60271DF4FEB300F8CCD8 /* ViewController.m */,
 				A7455E921E1014AD00C1E268 /* block和C函数 */,
+				A7455E931E1014E400C1E268 /* BlockAndCFunc.h */,
+				A7455E941E1014E400C1E268 /* BlockAndCFunc.m */,
 				A7455E8D1E1012F200C1E268 /* 函数式到链式 */,
+				A7455E8E1E1012F200C1E268 /* Animal.h */,
+				A7455E8F1E1012F200C1E268 /* Animal.m */,
 				A1BF60381DF4FF5000F8CCD8 /* 函数式编程 */,
+				A1BF60421DF505CE00F8CCD8 /* Calculator.h */,
+				A1BF60431DF505CE00F8CCD8 /* Calculator.m */,
 				A1BF60371DF4FF5000F8CCD8 /* 链式编程 */,
+				A1BF60451DF51A5000F8CCD8 /* Person.h */,
+				A1BF60461DF51A5000F8CCD8 /* Person.m */,
 				A1BF60481DF53E1300F8CCD8 /* 响应式编程 */,
+				A1BF60491DF53FF200F8CCD8 /* ResponseModel.h */,
+				A1BF604A1DF53FF200F8CCD8 /* ResponseModel.m */,
+				A1EA93EF1E97C610000DCBCE /* 函数式和链式 */,
 				A1BF60291DF4FEB300F8CCD8 /* Main.storyboard */,
 				A1BF602C1DF4FEB300F8CCD8 /* Assets.xcassets */,
 				A1BF602E1DF4FEB300F8CCD8 /* LaunchScreen.storyboard */,
@@ -102,8 +116,6 @@
 		A1BF60371DF4FF5000F8CCD8 /* 链式编程 */ = {
 			isa = PBXGroup;
 			children = (
-				A1BF60451DF51A5000F8CCD8 /* Person.h */,
-				A1BF60461DF51A5000F8CCD8 /* Person.m */,
 			);
 			path = "链式编程";
 			sourceTree = "<group>";
@@ -111,8 +123,6 @@
 		A1BF60381DF4FF5000F8CCD8 /* 函数式编程 */ = {
 			isa = PBXGroup;
 			children = (
-				A1BF60421DF505CE00F8CCD8 /* Calculator.h */,
-				A1BF60431DF505CE00F8CCD8 /* Calculator.m */,
 			);
 			path = "函数式编程";
 			sourceTree = "<group>";
@@ -120,17 +130,22 @@
 		A1BF60481DF53E1300F8CCD8 /* 响应式编程 */ = {
 			isa = PBXGroup;
 			children = (
-				A1BF60491DF53FF200F8CCD8 /* ResponseModel.h */,
-				A1BF604A1DF53FF200F8CCD8 /* ResponseModel.m */,
 			);
 			path = "响应式编程";
+			sourceTree = "<group>";
+		};
+		A1EA93EF1E97C610000DCBCE /* 函数式和链式 */ = {
+			isa = PBXGroup;
+			children = (
+				A1EA93F01E97C623000DCBCE /* Robot.h */,
+				A1EA93F11E97C623000DCBCE /* Robot.m */,
+			);
+			path = "函数式和链式";
 			sourceTree = "<group>";
 		};
 		A7455E8D1E1012F200C1E268 /* 函数式到链式 */ = {
 			isa = PBXGroup;
 			children = (
-				A7455E8E1E1012F200C1E268 /* Animal.h */,
-				A7455E8F1E1012F200C1E268 /* Animal.m */,
 			);
 			path = "函数式到链式";
 			sourceTree = "<group>";
@@ -138,8 +153,6 @@
 		A7455E921E1014AD00C1E268 /* block和C函数 */ = {
 			isa = PBXGroup;
 			children = (
-				A7455E931E1014E400C1E268 /* BlockAndCFunc.h */,
-				A7455E941E1014E400C1E268 /* BlockAndCFunc.m */,
 			);
 			path = "block和C函数";
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 				A1BF60471DF51A5000F8CCD8 /* Person.m in Sources */,
 				A7455E901E1012F200C1E268 /* Animal.m in Sources */,
 				A1BF60441DF505CE00F8CCD8 /* Calculator.m in Sources */,
+				A1EA93F21E97C623000DCBCE /* Robot.m in Sources */,
 				A1BF60221DF4FEB300F8CCD8 /* main.m in Sources */,
 				A7455E951E1014E400C1E268 /* BlockAndCFunc.m in Sources */,
 			);
